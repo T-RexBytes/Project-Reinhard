@@ -1,0 +1,269 @@
+======================================================================
+HYPOTHESIS ENGINE REPORT
+======================================================================
+Total chains evaluated: 10
+
+--- Rank 1 ---
+Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475
+Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16
+Composite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)
+
+WHY this modulation:
+  Classifier: 16QAM score=0.574 (supports)
+  Feature amp: fit=1.00
+  Feature kurt: fit=1.00
+  Feature papr: fit=0.00
+  Top-candidate margin: 0.246
+
+WHY this demodulation:
+  EVM RMS: 63.8% (poor)
+  EVM: -3.9 dB
+  Symbols recovered: 4096
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(none) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938
+    -> Chain [none|none|preamble+crc16]: 16384 bits -> deint(none),frame/preamble+crc16. Preamble locked at bit 2999 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 2999 (preamble corr 0.94)
+
+Operating context: SNR = 12.4 dB
+Uncertainty: std_dev ≈ 0.452
+
+Alternative paths considered:
+  - Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475
+  - Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383
+  - Chain[bc389ed2]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc32 | score=0.383
+
+--- Rank 2 ---
+Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475
+Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32
+Composite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)
+
+WHY this modulation:
+  Classifier: 16QAM score=0.574 (supports)
+  Feature amp: fit=1.00
+  Feature kurt: fit=1.00
+  Feature papr: fit=0.00
+  Top-candidate margin: 0.246
+
+WHY this demodulation:
+  EVM RMS: 63.8% (poor)
+  EVM: -3.9 dB
+  Symbols recovered: 4096
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(none) -> frame/preamble+crc32 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938
+    -> Chain [none|none|preamble+crc32]: 16384 bits -> deint(none),frame/preamble+crc32. Preamble locked at bit 2999 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 2999 (preamble corr 0.94)
+
+Operating context: SNR = 12.4 dB
+Uncertainty: std_dev ≈ 0.452
+
+Alternative paths considered:
+  - Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475
+  - Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383
+  - Chain[bc389ed2]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc32 | score=0.383
+
+--- Rank 3 ---
+Chain[8db8c46d]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_223 -> preamble+crc16 | score=0.475
+Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_223 -> preamble+crc16
+Composite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)
+
+WHY this modulation:
+  Classifier: 16QAM score=0.574 (supports)
+  Feature amp: fit=1.00
+  Feature kurt: fit=1.00
+  Feature papr: fit=0.00
+  Top-candidate margin: 0.246
+
+WHY this demodulation:
+  EVM RMS: 63.8% (poor)
+  EVM: -3.9 dB
+  Symbols recovered: 4096
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(none) -> RS 255,223 (0 sym corr) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938
+    -> Chain [rs255_223|none|preamble+crc16]: 14272 bits -> deint(none),RS 255,223 (0 sym corr),frame/preamble+crc16. Preamble locked at bit 2487 (corr 0.94); payload length scan 16..248 B.; Frame locked at 
+
+Operating context: SNR = 12.4 dB
+Uncertainty: std_dev ≈ 0.452
+
+Alternative paths considered:
+  - Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475
+  - Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475
+  - Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383
+
+--- Rank 4 ---
+Chain[e45ad9d3]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_223 -> preamble+crc32 | score=0.475
+Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_223 -> preamble+crc32
+Composite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)
+
+WHY this modulation:
+  Classifier: 16QAM score=0.574 (supports)
+  Feature amp: fit=1.00
+  Feature kurt: fit=1.00
+  Feature papr: fit=0.00
+  Top-candidate margin: 0.246
+
+WHY this demodulation:
+  EVM RMS: 63.8% (poor)
+  EVM: -3.9 dB
+  Symbols recovered: 4096
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(none) -> RS 255,223 (0 sym corr) -> frame/preamble+crc32 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938
+    -> Chain [rs255_223|none|preamble+crc32]: 14272 bits -> deint(none),RS 255,223 (0 sym corr),frame/preamble+crc32. Preamble locked at bit 2487 (corr 0.94); payload length scan 16..248 B.; Frame locked at 
+
+Operating context: SNR = 12.4 dB
+Uncertainty: std_dev ≈ 0.452
+
+--- Rank 5 ---
+Chain[388ec4dd]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_239 -> preamble+crc16 | score=0.475
+Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_239 -> preamble+crc16
+Composite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)
+
+WHY this modulation:
+  Classifier: 16QAM score=0.574 (supports)
+  Feature amp: fit=1.00
+  Feature kurt: fit=1.00
+  Feature papr: fit=0.00
+  Top-candidate margin: 0.246
+
+WHY this demodulation:
+  EVM RMS: 63.8% (poor)
+  EVM: -3.9 dB
+  Symbols recovered: 4096
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(none) -> RS 255,239 (0 sym corr) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938
+    -> Chain [rs255_239|none|preamble+crc16]: 15296 bits -> deint(none),RS 255,239 (0 sym corr),frame/preamble+crc16. Preamble locked at bit 2743 (corr 0.94); payload length scan 16..248 B.; Frame locked at 
+
+Operating context: SNR = 12.4 dB
+Uncertainty: std_dev ≈ 0.452
+
+--- Rank 6 ---
+Chain[ac8ef0ce]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_239 -> preamble+crc32 | score=0.475
+Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_239 -> preamble+crc32
+Composite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)
+
+WHY this modulation:
+  Classifier: 16QAM score=0.574 (supports)
+  Feature amp: fit=1.00
+  Feature kurt: fit=1.00
+  Feature papr: fit=0.00
+  Top-candidate margin: 0.246
+
+WHY this demodulation:
+  EVM RMS: 63.8% (poor)
+  EVM: -3.9 dB
+  Symbols recovered: 4096
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(none) -> RS 255,239 (0 sym corr) -> frame/preamble+crc32 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938
+    -> Chain [rs255_239|none|preamble+crc32]: 15296 bits -> deint(none),RS 255,239 (0 sym corr),frame/preamble+crc32. Preamble locked at bit 2743 (corr 0.94); payload length scan 16..248 B.; Frame locked at 
+
+Operating context: SNR = 12.4 dB
+Uncertainty: std_dev ≈ 0.452
+
+--- Rank 7 ---
+Chain[2a27af0d]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> none -> preamble+crc16 | score=0.475
+Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> none -> preamble+crc16
+Composite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)
+
+WHY this modulation:
+  Classifier: 16QAM score=0.574 (supports)
+  Feature amp: fit=1.00
+  Feature kurt: fit=1.00
+  Feature papr: fit=0.00
+  Top-candidate margin: 0.246
+
+WHY this demodulation:
+  EVM RMS: 63.8% (poor)
+  EVM: -3.9 dB
+  Symbols recovered: 4096
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(block(4, 8)) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938
+    -> Chain [none|block(4,8)|preamble+crc16]: 16384 bits -> deint(block(4, 8)),frame/preamble+crc16. Preamble locked at bit 352 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 352 (preamble
+
+Operating context: SNR = 12.4 dB
+Uncertainty: std_dev ≈ 0.452
+
+--- Rank 8 ---
+Chain[b399c70f]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> none -> preamble+crc32 | score=0.475
+Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> none -> preamble+crc32
+Composite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)
+
+WHY this modulation:
+  Classifier: 16QAM score=0.574 (supports)
+  Feature amp: fit=1.00
+  Feature kurt: fit=1.00
+  Feature papr: fit=0.00
+  Top-candidate margin: 0.246
+
+WHY this demodulation:
+  EVM RMS: 63.8% (poor)
+  EVM: -3.9 dB
+  Symbols recovered: 4096
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(block(4, 8)) -> frame/preamble+crc32 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938
+    -> Chain [none|block(4,8)|preamble+crc32]: 16384 bits -> deint(block(4, 8)),frame/preamble+crc32. Preamble locked at bit 352 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 352 (preamble
+
+Operating context: SNR = 12.4 dB
+Uncertainty: std_dev ≈ 0.452
+
+--- Rank 9 ---
+Chain[70a0bdf5]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> rs255_223 -> preamble+crc16 | score=0.475
+Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> rs255_223 -> preamble+crc16
+Composite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)
+
+WHY this modulation:
+  Classifier: 16QAM score=0.574 (supports)
+  Feature amp: fit=1.00
+  Feature kurt: fit=1.00
+  Feature papr: fit=0.00
+  Top-candidate margin: 0.246
+
+WHY this demodulation:
+  EVM RMS: 63.8% (poor)
+  EVM: -3.9 dB
+  Symbols recovered: 4096
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(block(4, 8)) -> RS 255,223 (0 sym corr) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938
+    -> Chain [rs255_223|block(4,8)|preamble+crc16]: 14272 bits -> deint(block(4, 8)),RS 255,223 (0 sym corr),frame/preamble+crc16. Preamble locked at bit 96 (corr 0.94); payload length scan 16..248 B.; Frame
+
+Operating context: SNR = 12.4 dB
+Uncertainty: std_dev ≈ 0.452
+
+--- Rank 10 ---
+Chain[1aa61454]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> rs255_223 -> preamble+crc32 | score=0.475
+Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> rs255_223 -> preamble+crc32
+Composite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)
+
+WHY this modulation:
+  Classifier: 16QAM score=0.574 (supports)
+  Feature amp: fit=1.00
+  Feature kurt: fit=1.00
+  Feature papr: fit=0.00
+  Top-candidate margin: 0.246
+
+WHY this demodulation:
+  EVM RMS: 63.8% (poor)
+  EVM: -3.9 dB
+  Symbols recovered: 4096
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(block(4, 8)) -> RS 255,223 (0 sym corr) -> frame/preamble+crc32 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938
+    -> Chain [rs255_223|block(4,8)|preamble+crc32]: 14272 bits -> deint(block(4, 8)),RS 255,223 (0 sym corr),frame/preamble+crc32. Preamble locked at bit 96 (corr 0.94); payload length scan 16..248 B.; Frame
+
+Operating context: SNR = 12.4 dB
+Uncertainty: std_dev ≈ 0.452

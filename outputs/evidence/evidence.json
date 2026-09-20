@@ -1,0 +1,2707 @@
+{
+  "name": "rf_hypothesis",
+  "metadata": {
+    "filename": "frame_0000.sigmf-data",
+    "sample_rate": 61440000.0,
+    "center_frequency": 622959998.0
+  },
+  "items": [
+    {
+      "id": "signal:snr_db",
+      "stage": "detection",
+      "candidate": "signal",
+      "measurement": "snr_db",
+      "value": 12.41051,
+      "value_norm": 0.4974,
+      "quality": "fair",
+      "supports": true,
+      "weight": 0.6,
+      "source": "snr.estimate_snr_from_psd",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "dB",
+      "context": {
+        "method": "psd_ratio"
+      },
+      "timestamp": 1789235394.1540203
+    },
+    {
+      "id": "signal:bandwidth_hz",
+      "stage": "detection",
+      "candidate": "signal",
+      "measurement": "bandwidth_hz",
+      "value": 120000.0,
+      "value_norm": 0.012,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.4,
+      "source": "bandwidth.estimate_bandwidth",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "Hz",
+      "context": {},
+      "timestamp": 1789235394.1540277
+    },
+    {
+      "id": "signal:noise_floor_db",
+      "stage": "detection",
+      "candidate": "signal",
+      "measurement": "noise_floor_db",
+      "value": -78.91658,
+      "value_norm": 0.4108,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.3,
+      "source": "noise_floor.estimate_noise_floor",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "dB",
+      "context": {
+        "method": "mad"
+      },
+      "timestamp": 1789235394.154033
+    },
+    {
+      "id": "signal:num_segments",
+      "stage": "detection",
+      "candidate": "signal",
+      "measurement": "num_segments",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "fair",
+      "supports": true,
+      "weight": 0.3,
+      "source": "segmentation.build_segments",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "detection_threshold_db": -68.91658020019531
+      },
+      "timestamp": 1789235394.1540377
+    },
+    {
+      "id": "signal:c42_norm",
+      "stage": "characterization",
+      "candidate": "signal",
+      "measurement": "c42_norm",
+      "value": 6.8627,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.35,
+      "source": "features.C42_norm",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.154045
+    },
+    {
+      "id": "signal:c21_sym",
+      "stage": "characterization",
+      "candidate": "signal",
+      "measurement": "c21_sym",
+      "value": 0.02628,
+      "value_norm": 0.0263,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.3,
+      "source": "features.C21_sym",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1540504
+    },
+    {
+      "id": "signal:papr_db",
+      "stage": "characterization",
+      "candidate": "signal",
+      "measurement": "papr_db",
+      "value": 18.53969,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.2,
+      "source": "features.papr_db",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1540542
+    },
+    {
+      "id": "signal:spectral_flatness",
+      "stage": "characterization",
+      "candidate": "signal",
+      "measurement": "spectral_flatness",
+      "value": 0.53937,
+      "value_norm": 0.5394,
+      "quality": "fair",
+      "supports": true,
+      "weight": 0.25,
+      "source": "features.spectral_flatness",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1540573
+    },
+    {
+      "id": "signal:amplitude_variance",
+      "stage": "characterization",
+      "candidate": "signal",
+      "measurement": "amplitude_variance",
+      "value": 0.9321,
+      "value_norm": 0.9321,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.15,
+      "source": "features.amplitude_variance_norm",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.15406
+    },
+    {
+      "id": "signal:kurtosis_amplitude",
+      "stage": "characterization",
+      "candidate": "signal",
+      "measurement": "kurtosis_amplitude",
+      "value": 15.81273,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.15,
+      "source": "features.kurtosis_amplitude",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.154062
+    },
+    {
+      "id": "signal:symbol_rate_hz",
+      "stage": "characterization",
+      "candidate": "signal",
+      "measurement": "symbol_rate_hz",
+      "value": 2115000.0,
+      "value_norm": 0.2115,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.5,
+      "source": "symbol_rate.estimate_symbol_rate",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "Hz",
+      "context": {
+        "confidence": 0.9,
+        "method": "envelope"
+      },
+      "timestamp": 1789235394.1540723
+    },
+    {
+      "id": "signal:symbol_rate_confidence",
+      "stage": "characterization",
+      "candidate": "signal",
+      "measurement": "symbol_rate_confidence",
+      "value": 0.9,
+      "value_norm": 0.9,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.3,
+      "source": "symbol_rate.estimate_symbol_rate",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.154075
+    },
+    {
+      "id": "signal:freq_offset_hz",
+      "stage": "characterization",
+      "candidate": "signal",
+      "measurement": "freq_offset_hz",
+      "value": 10380000.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.4,
+      "source": "freq_offset.estimate_freq_offset",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "Hz",
+      "context": {
+        "confidence": 0.817,
+        "method": "psd_peak"
+      },
+      "timestamp": 1789235394.1540797
+    },
+    {
+      "id": "16QAM:classifier_score",
+      "stage": "modulation",
+      "candidate": "16QAM",
+      "measurement": "classifier_score",
+      "value": 0.57448,
+      "value_norm": 0.5745,
+      "quality": "fair",
+      "supports": true,
+      "weight": 1.4,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "C42_norm": 6.863,
+        "C21_sym": 0.026,
+        "papr_db": 18.54,
+        "amp_var": 0.932,
+        "kurt_amp": 15.813,
+        "phase_std": 1.809,
+        "inst_freq_std_norm": 0.24795,
+        "spectral_flatness": 0.5394
+      },
+      "timestamp": 1789235394.1541057
+    },
+    {
+      "id": "16QAM:classifier_confidence",
+      "stage": "modulation",
+      "candidate": "16QAM",
+      "measurement": "classifier_confidence",
+      "value": 0.49918,
+      "value_norm": 0.4992,
+      "quality": "fair",
+      "supports": true,
+      "weight": 0.6,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+      },
+      "timestamp": 1789235394.154108
+    },
+    {
+      "id": "16QAM:fit_fit_c42",
+      "stage": "modulation",
+      "candidate": "16QAM",
+      "measurement": "fit_fit_c42",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+      },
+      "timestamp": 1789235394.1541142
+    },
+    {
+      "id": "16QAM:fit_fit_amp",
+      "stage": "modulation",
+      "candidate": "16QAM",
+      "measurement": "fit_fit_amp",
+      "value": 1.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+      },
+      "timestamp": 1789235394.154118
+    },
+    {
+      "id": "16QAM:fit_fit_kurt",
+      "stage": "modulation",
+      "candidate": "16QAM",
+      "measurement": "fit_fit_kurt",
+      "value": 1.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+      },
+      "timestamp": 1789235394.1541207
+    },
+    {
+      "id": "16QAM:fit_fit_papr",
+      "stage": "modulation",
+      "candidate": "16QAM",
+      "measurement": "fit_fit_papr",
+      "value": 4e-05,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+      },
+      "timestamp": 1789235394.1541228
+    },
+    {
+      "id": "QPSK:classifier_score",
+      "stage": "modulation",
+      "candidate": "QPSK",
+      "measurement": "classifier_score",
+      "value": 0.32869,
+      "value_norm": 0.3287,
+      "quality": "poor",
+      "supports": true,
+      "weight": 1.4,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "C42_norm": 6.863,
+        "C21_sym": 0.026,
+        "papr_db": 18.54,
+        "amp_var": 0.932,
+        "kurt_amp": 15.813,
+        "phase_std": 1.809,
+        "inst_freq_std_norm": 0.24795,
+        "spectral_flatness": 0.5394
+      },
+      "timestamp": 1789235394.1541262
+    },
+    {
+      "id": "QPSK:classifier_confidence",
+      "stage": "modulation",
+      "candidate": "QPSK",
+      "measurement": "classifier_confidence",
+      "value": 0.2856,
+      "value_norm": 0.2856,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (QPSK target ~1.0), 4-fold symmetry C21_sym=0.026 (<0.25), single-shell amplitude kurtosis=15.81 (< -0.40), PAPR=18.5 dB."
+      },
+      "timestamp": 1789235394.1541283
+    },
+    {
+      "id": "QPSK:fit_fit_c42",
+      "stage": "modulation",
+      "candidate": "QPSK",
+      "measurement": "fit_fit_c42",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (QPSK target ~1.0), 4-fold symmetry C21_sym=0.026 (<0.25), single-shell amplitude kurtosis=15.81 (< -0.40), PAPR=18.5 dB."
+      },
+      "timestamp": 1789235394.1541314
+    },
+    {
+      "id": "QPSK:fit_fit_sym",
+      "stage": "modulation",
+      "candidate": "QPSK",
+      "measurement": "fit_fit_sym",
+      "value": 0.99449,
+      "value_norm": 0.9945,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (QPSK target ~1.0), 4-fold symmetry C21_sym=0.026 (<0.25), single-shell amplitude kurtosis=15.81 (< -0.40), PAPR=18.5 dB."
+      },
+      "timestamp": 1789235394.154135
+    },
+    {
+      "id": "QPSK:fit_fit_kurt",
+      "stage": "modulation",
+      "candidate": "QPSK",
+      "measurement": "fit_fit_kurt",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (QPSK target ~1.0), 4-fold symmetry C21_sym=0.026 (<0.25), single-shell amplitude kurtosis=15.81 (< -0.40), PAPR=18.5 dB."
+      },
+      "timestamp": 1789235394.1541371
+    },
+    {
+      "id": "QPSK:fit_fit_papr",
+      "stage": "modulation",
+      "candidate": "QPSK",
+      "measurement": "fit_fit_papr",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (QPSK target ~1.0), 4-fold symmetry C21_sym=0.026 (<0.25), single-shell amplitude kurtosis=15.81 (< -0.40), PAPR=18.5 dB."
+      },
+      "timestamp": 1789235394.1541388
+    },
+    {
+      "id": "Noise/CW:classifier_score",
+      "stage": "modulation",
+      "candidate": "Noise/CW",
+      "measurement": "classifier_score",
+      "value": 0.07725,
+      "value_norm": 0.0772,
+      "quality": "poor",
+      "supports": true,
+      "weight": 1.4,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "C42_norm": 6.863,
+        "C21_sym": 0.026,
+        "papr_db": 18.54,
+        "amp_var": 0.932,
+        "kurt_amp": 15.813,
+        "phase_std": 1.809,
+        "inst_freq_std_norm": 0.24795,
+        "spectral_flatness": 0.5394
+      },
+      "timestamp": 1789235394.1541414
+    },
+    {
+      "id": "Noise/CW:classifier_confidence",
+      "stage": "modulation",
+      "candidate": "Noise/CW",
+      "measurement": "classifier_confidence",
+      "value": 0.06712,
+      "value_norm": 0.0671,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "SNR=12.4 dB (moderate SNR), spectral flatness=0.539."
+      },
+      "timestamp": 1789235394.1541438
+    },
+    {
+      "id": "Noise/CW:fit_is_low_snr",
+      "stage": "modulation",
+      "candidate": "Noise/CW",
+      "measurement": "fit_is_low_snr",
+      "value": 0.00942,
+      "value_norm": 0.0094,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "SNR=12.4 dB (moderate SNR), spectral flatness=0.539."
+      },
+      "timestamp": 1789235394.1541462
+    },
+    {
+      "id": "Noise/CW:fit_is_flat_noise",
+      "stage": "modulation",
+      "candidate": "Noise/CW",
+      "measurement": "fit_is_flat_noise",
+      "value": 0.09589,
+      "value_norm": 0.0959,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "SNR=12.4 dB (moderate SNR), spectral flatness=0.539."
+      },
+      "timestamp": 1789235394.1541483
+    },
+    {
+      "id": "BPSK:classifier_score",
+      "stage": "modulation",
+      "candidate": "BPSK",
+      "measurement": "classifier_score",
+      "value": 0.01728,
+      "value_norm": 0.0173,
+      "quality": "poor",
+      "supports": true,
+      "weight": 1.4,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "C42_norm": 6.863,
+        "C21_sym": 0.026,
+        "papr_db": 18.54,
+        "amp_var": 0.932,
+        "kurt_amp": 15.813,
+        "phase_std": 1.809,
+        "inst_freq_std_norm": 0.24795,
+        "spectral_flatness": 0.5394
+      },
+      "timestamp": 1789235394.1541529
+    },
+    {
+      "id": "BPSK:classifier_confidence",
+      "stage": "modulation",
+      "candidate": "BPSK",
+      "measurement": "classifier_confidence",
+      "value": 0.05,
+      "value_norm": 0.05,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (BPSK target 2.0), 2-fold symmetry C21_sym=0.03 (target 1.0), PAPR=18.5 dB, amp_var=0.93."
+      },
+      "timestamp": 1789235394.1541553
+    },
+    {
+      "id": "BPSK:fit_fit_c42",
+      "stage": "modulation",
+      "candidate": "BPSK",
+      "measurement": "fit_fit_c42",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (BPSK target 2.0), 2-fold symmetry C21_sym=0.03 (target 1.0), PAPR=18.5 dB, amp_var=0.93."
+      },
+      "timestamp": 1789235394.1541574
+    },
+    {
+      "id": "BPSK:fit_fit_sym",
+      "stage": "modulation",
+      "candidate": "BPSK",
+      "measurement": "fit_fit_sym",
+      "value": 0.05,
+      "value_norm": 0.05,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (BPSK target 2.0), 2-fold symmetry C21_sym=0.03 (target 1.0), PAPR=18.5 dB, amp_var=0.93."
+      },
+      "timestamp": 1789235394.1541593
+    },
+    {
+      "id": "BPSK:fit_fit_papr",
+      "stage": "modulation",
+      "candidate": "BPSK",
+      "measurement": "fit_fit_papr",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "C42=6.86 (BPSK target 2.0), 2-fold symmetry C21_sym=0.03 (target 1.0), PAPR=18.5 dB, amp_var=0.93."
+      },
+      "timestamp": 1789235394.1541612
+    },
+    {
+      "id": "2-FSK:classifier_score",
+      "stage": "modulation",
+      "candidate": "2-FSK",
+      "measurement": "classifier_score",
+      "value": 0.00115,
+      "value_norm": 0.0012,
+      "quality": "poor",
+      "supports": true,
+      "weight": 1.4,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "C42_norm": 6.863,
+        "C21_sym": 0.026,
+        "papr_db": 18.54,
+        "amp_var": 0.932,
+        "kurt_amp": 15.813,
+        "phase_std": 1.809,
+        "inst_freq_std_norm": 0.24795,
+        "spectral_flatness": 0.5394
+      },
+      "timestamp": 1789235394.1541631
+    },
+    {
+      "id": "2-FSK:classifier_confidence",
+      "stage": "modulation",
+      "candidate": "2-FSK",
+      "measurement": "classifier_confidence",
+      "value": 0.05,
+      "value_norm": 0.05,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "Constant envelope PAPR=18.5 dB, amp_var=0.93, C42=6.86 (gate=0.00), frequency deviation norm=0.2479."
+      },
+      "timestamp": 1789235394.154165
+    },
+    {
+      "id": "2-FSK:fit_c42_gate",
+      "stage": "modulation",
+      "candidate": "2-FSK",
+      "measurement": "fit_c42_gate",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "Constant envelope PAPR=18.5 dB, amp_var=0.93, C42=6.86 (gate=0.00), frequency deviation norm=0.2479."
+      },
+      "timestamp": 1789235394.1541667
+    },
+    {
+      "id": "2-FSK:fit_fit_papr",
+      "stage": "modulation",
+      "candidate": "2-FSK",
+      "measurement": "fit_fit_papr",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "Constant envelope PAPR=18.5 dB, amp_var=0.93, C42=6.86 (gate=0.00), frequency deviation norm=0.2479."
+      },
+      "timestamp": 1789235394.1541686
+    },
+    {
+      "id": "2-FSK:fit_fit_dev",
+      "stage": "modulation",
+      "candidate": "2-FSK",
+      "measurement": "fit_fit_dev",
+      "value": 1.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "Constant envelope PAPR=18.5 dB, amp_var=0.93, C42=6.86 (gate=0.00), frequency deviation norm=0.2479."
+      },
+      "timestamp": 1789235394.154171
+    },
+    {
+      "id": "4-FSK:classifier_score",
+      "stage": "modulation",
+      "candidate": "4-FSK",
+      "measurement": "classifier_score",
+      "value": 0.00115,
+      "value_norm": 0.0012,
+      "quality": "poor",
+      "supports": true,
+      "weight": 1.4,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "C42_norm": 6.863,
+        "C21_sym": 0.026,
+        "papr_db": 18.54,
+        "amp_var": 0.932,
+        "kurt_amp": 15.813,
+        "phase_std": 1.809,
+        "inst_freq_std_norm": 0.24795,
+        "spectral_flatness": 0.5394
+      },
+      "timestamp": 1789235394.1541727
+    },
+    {
+      "id": "4-FSK:classifier_confidence",
+      "stage": "modulation",
+      "candidate": "4-FSK",
+      "measurement": "classifier_confidence",
+      "value": 0.05,
+      "value_norm": 0.05,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "Multi-tone FSK profile, PAPR=18.5 dB, amp_var=0.93, C42=6.86, frequency deviation norm=0.2479."
+      },
+      "timestamp": 1789235394.154174
+    },
+    {
+      "id": "4-FSK:fit_c42_gate",
+      "stage": "modulation",
+      "candidate": "4-FSK",
+      "measurement": "fit_c42_gate",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "Multi-tone FSK profile, PAPR=18.5 dB, amp_var=0.93, C42=6.86, frequency deviation norm=0.2479."
+      },
+      "timestamp": 1789235394.1541762
+    },
+    {
+      "id": "4-FSK:fit_fit_papr",
+      "stage": "modulation",
+      "candidate": "4-FSK",
+      "measurement": "fit_fit_papr",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "Multi-tone FSK profile, PAPR=18.5 dB, amp_var=0.93, C42=6.86, frequency deviation norm=0.2479."
+      },
+      "timestamp": 1789235394.154178
+    },
+    {
+      "id": "4-FSK:fit_fit_dev",
+      "stage": "modulation",
+      "candidate": "4-FSK",
+      "measurement": "fit_fit_dev",
+      "value": 1.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.35,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "why": "Multi-tone FSK profile, PAPR=18.5 dB, amp_var=0.93, C42=6.86, frequency deviation norm=0.2479."
+      },
+      "timestamp": 1789235394.154182
+    },
+    {
+      "id": "16QAM:top_margin",
+      "stage": "modulation",
+      "candidate": "16QAM",
+      "measurement": "top_margin",
+      "value": 0.2458,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.4,
+      "source": "modulation.classifier.classify",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "delta_score",
+      "context": {},
+      "timestamp": 1789235394.1541862
+    },
+    {
+      "id": "16QAM:evm_rms_percent",
+      "stage": "demodulation",
+      "candidate": "16QAM",
+      "measurement": "evm_rms_percent",
+      "value": 58.3456,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 1.5,
+      "source": "demodulation.slicer.compute_evm",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "%",
+      "context": {},
+      "timestamp": 1789235394.1542583
+    },
+    {
+      "id": "16QAM:evm_db",
+      "stage": "demodulation",
+      "candidate": "16QAM",
+      "measurement": "evm_db",
+      "value": -4.67984,
+      "value_norm": 0.117,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "demodulation.slicer.compute_evm",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "dB",
+      "context": {},
+      "timestamp": 1789235394.1542625
+    },
+    {
+      "id": "16QAM:num_symbols",
+      "stage": "demodulation",
+      "candidate": "16QAM",
+      "measurement": "num_symbols",
+      "value": 1024.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.35,
+      "source": "demodulation.slicer.demodulate_signal",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1542654
+    },
+    {
+      "id": "16QAM:residual_phase_rad",
+      "stage": "demodulation",
+      "candidate": "16QAM",
+      "measurement": "residual_phase_rad",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.4,
+      "source": "demodulation.synchronizer",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "rad",
+      "context": {},
+      "timestamp": 1789235394.1542702
+    },
+    {
+      "id": "viterbi|block(1, 3)|preamble+crc16:crc_valid:8971c53a38",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 3)|preamble+crc16",
+      "measurement": "crc_valid",
+      "value": 0.0,
+      "value_norm": 0.5,
+      "quality": "fair",
+      "supports": false,
+      "weight": 2.0,
+      "source": "decoding.frame.frame_sync",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "fec": "none",
+        "used_soft": false
+      },
+      "timestamp": 1789235394.154312
+    },
+    {
+      "id": "viterbi|block(1, 3)|preamble+crc16:decode_ok:31f7440f9d",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 3)|preamble+crc16",
+      "measurement": "decode_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 1.0,
+      "source": "decoding.decoder.decode_bits",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "why": "Stream length 4096 is not a multiple of block size 3; candidate not applicable."
+      },
+      "timestamp": 1789235394.154322
+    },
+    {
+      "id": "viterbi|block(1, 3)|preamble+crc16:viterbi_residual_errors:63e22ed4e1",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 3)|preamble+crc16",
+      "measurement": "viterbi_residual_errors",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.8,
+      "source": "decoding.convolutional.decode_viterbi",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "errors",
+      "context": {},
+      "timestamp": 1789235394.1543286
+    },
+    {
+      "id": "viterbi|block(1, 3)|preamble+crc16:rs_symbols_corrected:4e5c46ab3f",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 3)|preamble+crc16",
+      "measurement": "rs_symbols_corrected",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "decoding.reed_solomon.rs_decode",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "symbols",
+      "context": {},
+      "timestamp": 1789235394.1543334
+    },
+    {
+      "id": "viterbi|block(1, 3)|preamble+crc16:preamble_correlation:ae09106b2e",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 3)|preamble+crc16",
+      "measurement": "preamble_correlation",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "decoding.frame.correlate_preamble",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1543388
+    },
+    {
+      "id": "viterbi|block(1, 3)|preamble+crc32:crc_valid:677a698bec",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 3)|preamble+crc32",
+      "measurement": "crc_valid",
+      "value": 0.0,
+      "value_norm": 0.5,
+      "quality": "fair",
+      "supports": false,
+      "weight": 2.0,
+      "source": "decoding.frame.frame_sync",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "fec": "none",
+        "used_soft": false
+      },
+      "timestamp": 1789235394.1543586
+    },
+    {
+      "id": "viterbi|block(1, 3)|preamble+crc32:decode_ok:5fe060e821",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 3)|preamble+crc32",
+      "measurement": "decode_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 1.0,
+      "source": "decoding.decoder.decode_bits",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "why": "Stream length 4096 is not a multiple of block size 3; candidate not applicable."
+      },
+      "timestamp": 1789235394.1543643
+    },
+    {
+      "id": "viterbi|block(1, 3)|preamble+crc32:viterbi_residual_errors:f1922c8bde",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 3)|preamble+crc32",
+      "measurement": "viterbi_residual_errors",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.8,
+      "source": "decoding.convolutional.decode_viterbi",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "errors",
+      "context": {},
+      "timestamp": 1789235394.1543696
+    },
+    {
+      "id": "viterbi|block(1, 3)|preamble+crc32:rs_symbols_corrected:cb279cb21c",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 3)|preamble+crc32",
+      "measurement": "rs_symbols_corrected",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "decoding.reed_solomon.rs_decode",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "symbols",
+      "context": {},
+      "timestamp": 1789235394.1543741
+    },
+    {
+      "id": "viterbi|block(1, 3)|preamble+crc32:preamble_correlation:1371b63584",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 3)|preamble+crc32",
+      "measurement": "preamble_correlation",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "decoding.frame.correlate_preamble",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1543782
+    },
+    {
+      "id": "rs255_223|block(1, 3)|preamble+crc16:crc_valid:4de4e9aba6",
+      "stage": "decoding",
+      "candidate": "rs255_223|block(1, 3)|preamble+crc16",
+      "measurement": "crc_valid",
+      "value": 0.0,
+      "value_norm": 0.5,
+      "quality": "fair",
+      "supports": false,
+      "weight": 2.0,
+      "source": "decoding.frame.frame_sync",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "fec": "none",
+        "used_soft": false
+      },
+      "timestamp": 1789235394.1543937
+    },
+    {
+      "id": "rs255_223|block(1, 3)|preamble+crc16:decode_ok:f941c9ffcb",
+      "stage": "decoding",
+      "candidate": "rs255_223|block(1, 3)|preamble+crc16",
+      "measurement": "decode_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 1.0,
+      "source": "decoding.decoder.decode_bits",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "why": "Stream length 4096 is not a multiple of block size 3; candidate not applicable."
+      },
+      "timestamp": 1789235394.1543982
+    },
+    {
+      "id": "rs255_223|block(1, 3)|preamble+crc16:viterbi_residual_errors:d568db1a04",
+      "stage": "decoding",
+      "candidate": "rs255_223|block(1, 3)|preamble+crc16",
+      "measurement": "viterbi_residual_errors",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.8,
+      "source": "decoding.convolutional.decode_viterbi",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "errors",
+      "context": {},
+      "timestamp": 1789235394.1544018
+    },
+    {
+      "id": "rs255_223|block(1, 3)|preamble+crc16:rs_symbols_corrected:61d3e46a2d",
+      "stage": "decoding",
+      "candidate": "rs255_223|block(1, 3)|preamble+crc16",
+      "measurement": "rs_symbols_corrected",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "decoding.reed_solomon.rs_decode",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "symbols",
+      "context": {},
+      "timestamp": 1789235394.1544049
+    },
+    {
+      "id": "rs255_223|block(1, 3)|preamble+crc16:preamble_correlation:7bc803aecd",
+      "stage": "decoding",
+      "candidate": "rs255_223|block(1, 3)|preamble+crc16",
+      "measurement": "preamble_correlation",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "decoding.frame.correlate_preamble",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1544085
+    },
+    {
+      "id": "rs255_223|block(1, 3)|preamble+crc32:crc_valid:7d88cd8256",
+      "stage": "decoding",
+      "candidate": "rs255_223|block(1, 3)|preamble+crc32",
+      "measurement": "crc_valid",
+      "value": 0.0,
+      "value_norm": 0.5,
+      "quality": "fair",
+      "supports": false,
+      "weight": 2.0,
+      "source": "decoding.frame.frame_sync",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "fec": "none",
+        "used_soft": false
+      },
+      "timestamp": 1789235394.154421
+    },
+    {
+      "id": "rs255_223|block(1, 3)|preamble+crc32:decode_ok:c94bbad156",
+      "stage": "decoding",
+      "candidate": "rs255_223|block(1, 3)|preamble+crc32",
+      "measurement": "decode_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 1.0,
+      "source": "decoding.decoder.decode_bits",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "why": "Stream length 4096 is not a multiple of block size 3; candidate not applicable."
+      },
+      "timestamp": 1789235394.1544244
+    },
+    {
+      "id": "rs255_223|block(1, 3)|preamble+crc32:viterbi_residual_errors:e51d26dfa7",
+      "stage": "decoding",
+      "candidate": "rs255_223|block(1, 3)|preamble+crc32",
+      "measurement": "viterbi_residual_errors",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.8,
+      "source": "decoding.convolutional.decode_viterbi",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "errors",
+      "context": {},
+      "timestamp": 1789235394.1544273
+    },
+    {
+      "id": "rs255_223|block(1, 3)|preamble+crc32:rs_symbols_corrected:9722ebc6a0",
+      "stage": "decoding",
+      "candidate": "rs255_223|block(1, 3)|preamble+crc32",
+      "measurement": "rs_symbols_corrected",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "decoding.reed_solomon.rs_decode",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "symbols",
+      "context": {},
+      "timestamp": 1789235394.1544306
+    },
+    {
+      "id": "rs255_223|block(1, 3)|preamble+crc32:preamble_correlation:f52bcf8ff1",
+      "stage": "decoding",
+      "candidate": "rs255_223|block(1, 3)|preamble+crc32",
+      "measurement": "preamble_correlation",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "decoding.frame.correlate_preamble",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1544337
+    },
+    {
+      "id": "viterbi+rs255_223|block(1, 3)|preamble+crc16:crc_valid:c7f0a2c0fd",
+      "stage": "decoding",
+      "candidate": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "measurement": "crc_valid",
+      "value": 0.0,
+      "value_norm": 0.5,
+      "quality": "fair",
+      "supports": false,
+      "weight": 2.0,
+      "source": "decoding.frame.frame_sync",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "fec": "none",
+        "used_soft": false
+      },
+      "timestamp": 1789235394.1544478
+    },
+    {
+      "id": "viterbi+rs255_223|block(1, 3)|preamble+crc16:decode_ok:b43f772fdb",
+      "stage": "decoding",
+      "candidate": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "measurement": "decode_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 1.0,
+      "source": "decoding.decoder.decode_bits",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "why": "Stream length 4096 is not a multiple of block size 3; candidate not applicable."
+      },
+      "timestamp": 1789235394.1544511
+    },
+    {
+      "id": "viterbi+rs255_223|block(1, 3)|preamble+crc16:viterbi_residual_errors:aa9ed8f62c",
+      "stage": "decoding",
+      "candidate": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "measurement": "viterbi_residual_errors",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.8,
+      "source": "decoding.convolutional.decode_viterbi",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "errors",
+      "context": {},
+      "timestamp": 1789235394.1544547
+    },
+    {
+      "id": "viterbi+rs255_223|block(1, 3)|preamble+crc16:rs_symbols_corrected:2d10459b83",
+      "stage": "decoding",
+      "candidate": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "measurement": "rs_symbols_corrected",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "decoding.reed_solomon.rs_decode",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "symbols",
+      "context": {},
+      "timestamp": 1789235394.1544576
+    },
+    {
+      "id": "viterbi+rs255_223|block(1, 3)|preamble+crc16:preamble_correlation:8aec0b0f46",
+      "stage": "decoding",
+      "candidate": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "measurement": "preamble_correlation",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "decoding.frame.correlate_preamble",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1544607
+    },
+    {
+      "id": "viterbi+rs255_223|block(1, 3)|preamble+crc32:crc_valid:ba57da1489",
+      "stage": "decoding",
+      "candidate": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "measurement": "crc_valid",
+      "value": 0.0,
+      "value_norm": 0.5,
+      "quality": "fair",
+      "supports": false,
+      "weight": 2.0,
+      "source": "decoding.frame.frame_sync",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "fec": "none",
+        "used_soft": false
+      },
+      "timestamp": 1789235394.1544757
+    },
+    {
+      "id": "viterbi+rs255_223|block(1, 3)|preamble+crc32:decode_ok:1dda11b0fc",
+      "stage": "decoding",
+      "candidate": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "measurement": "decode_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 1.0,
+      "source": "decoding.decoder.decode_bits",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "why": "Stream length 4096 is not a multiple of block size 3; candidate not applicable."
+      },
+      "timestamp": 1789235394.1544793
+    },
+    {
+      "id": "viterbi+rs255_223|block(1, 3)|preamble+crc32:viterbi_residual_errors:19dfd57455",
+      "stage": "decoding",
+      "candidate": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "measurement": "viterbi_residual_errors",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.8,
+      "source": "decoding.convolutional.decode_viterbi",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "errors",
+      "context": {},
+      "timestamp": 1789235394.1544826
+    },
+    {
+      "id": "viterbi+rs255_223|block(1, 3)|preamble+crc32:rs_symbols_corrected:fa5d894a2a",
+      "stage": "decoding",
+      "candidate": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "measurement": "rs_symbols_corrected",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "decoding.reed_solomon.rs_decode",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "symbols",
+      "context": {},
+      "timestamp": 1789235394.1544855
+    },
+    {
+      "id": "viterbi+rs255_223|block(1, 3)|preamble+crc32:preamble_correlation:89ad3089f6",
+      "stage": "decoding",
+      "candidate": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "measurement": "preamble_correlation",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "decoding.frame.correlate_preamble",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1544886
+    },
+    {
+      "id": "none|block(1, 3)|preamble+crc16:crc_valid:e9a172129e",
+      "stage": "decoding",
+      "candidate": "none|block(1, 3)|preamble+crc16",
+      "measurement": "crc_valid",
+      "value": 0.0,
+      "value_norm": 0.5,
+      "quality": "fair",
+      "supports": false,
+      "weight": 2.0,
+      "source": "decoding.frame.frame_sync",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "fec": "none",
+        "used_soft": false
+      },
+      "timestamp": 1789235394.1545038
+    },
+    {
+      "id": "none|block(1, 3)|preamble+crc16:decode_ok:a1adf790fc",
+      "stage": "decoding",
+      "candidate": "none|block(1, 3)|preamble+crc16",
+      "measurement": "decode_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 1.0,
+      "source": "decoding.decoder.decode_bits",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "why": "Stream length 4096 is not a multiple of block size 3; candidate not applicable."
+      },
+      "timestamp": 1789235394.154507
+    },
+    {
+      "id": "none|block(1, 3)|preamble+crc16:viterbi_residual_errors:20a8f80070",
+      "stage": "decoding",
+      "candidate": "none|block(1, 3)|preamble+crc16",
+      "measurement": "viterbi_residual_errors",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.8,
+      "source": "decoding.convolutional.decode_viterbi",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "errors",
+      "context": {},
+      "timestamp": 1789235394.15451
+    },
+    {
+      "id": "none|block(1, 3)|preamble+crc16:rs_symbols_corrected:85cd3b8f77",
+      "stage": "decoding",
+      "candidate": "none|block(1, 3)|preamble+crc16",
+      "measurement": "rs_symbols_corrected",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "decoding.reed_solomon.rs_decode",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "symbols",
+      "context": {},
+      "timestamp": 1789235394.1545134
+    },
+    {
+      "id": "none|block(1, 3)|preamble+crc16:preamble_correlation:28152b125c",
+      "stage": "decoding",
+      "candidate": "none|block(1, 3)|preamble+crc16",
+      "measurement": "preamble_correlation",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "decoding.frame.correlate_preamble",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1545165
+    },
+    {
+      "id": "none|block(1, 3)|preamble+crc32:crc_valid:f0a56ae2a2",
+      "stage": "decoding",
+      "candidate": "none|block(1, 3)|preamble+crc32",
+      "measurement": "crc_valid",
+      "value": 0.0,
+      "value_norm": 0.5,
+      "quality": "fair",
+      "supports": false,
+      "weight": 2.0,
+      "source": "decoding.frame.frame_sync",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "fec": "none",
+        "used_soft": false
+      },
+      "timestamp": 1789235394.1545322
+    },
+    {
+      "id": "none|block(1, 3)|preamble+crc32:decode_ok:13190942e8",
+      "stage": "decoding",
+      "candidate": "none|block(1, 3)|preamble+crc32",
+      "measurement": "decode_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 1.0,
+      "source": "decoding.decoder.decode_bits",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "why": "Stream length 4096 is not a multiple of block size 3; candidate not applicable."
+      },
+      "timestamp": 1789235394.154535
+    },
+    {
+      "id": "none|block(1, 3)|preamble+crc32:viterbi_residual_errors:2f0f50a50d",
+      "stage": "decoding",
+      "candidate": "none|block(1, 3)|preamble+crc32",
+      "measurement": "viterbi_residual_errors",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.8,
+      "source": "decoding.convolutional.decode_viterbi",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "errors",
+      "context": {},
+      "timestamp": 1789235394.1545398
+    },
+    {
+      "id": "none|block(1, 3)|preamble+crc32:rs_symbols_corrected:b964952a8b",
+      "stage": "decoding",
+      "candidate": "none|block(1, 3)|preamble+crc32",
+      "measurement": "rs_symbols_corrected",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "decoding.reed_solomon.rs_decode",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "symbols",
+      "context": {},
+      "timestamp": 1789235394.1545432
+    },
+    {
+      "id": "none|block(1, 3)|preamble+crc32:preamble_correlation:d2c6ced4b2",
+      "stage": "decoding",
+      "candidate": "none|block(1, 3)|preamble+crc32",
+      "measurement": "preamble_correlation",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "decoding.frame.correlate_preamble",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1545463
+    },
+    {
+      "id": "viterbi|block(1, 5)|preamble+crc16:crc_valid:2952dac83a",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 5)|preamble+crc16",
+      "measurement": "crc_valid",
+      "value": 0.0,
+      "value_norm": 0.5,
+      "quality": "fair",
+      "supports": false,
+      "weight": 2.0,
+      "source": "decoding.frame.frame_sync",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "fec": "none",
+        "used_soft": false
+      },
+      "timestamp": 1789235394.1545613
+    },
+    {
+      "id": "viterbi|block(1, 5)|preamble+crc16:decode_ok:03f55676a4",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 5)|preamble+crc16",
+      "measurement": "decode_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 1.0,
+      "source": "decoding.decoder.decode_bits",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "why": "Stream length 4096 is not a multiple of block size 5; candidate not applicable."
+      },
+      "timestamp": 1789235394.1545644
+    },
+    {
+      "id": "viterbi|block(1, 5)|preamble+crc16:viterbi_residual_errors:c1076de50f",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 5)|preamble+crc16",
+      "measurement": "viterbi_residual_errors",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.8,
+      "source": "decoding.convolutional.decode_viterbi",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "errors",
+      "context": {},
+      "timestamp": 1789235394.1545675
+    },
+    {
+      "id": "viterbi|block(1, 5)|preamble+crc16:rs_symbols_corrected:8260d4e631",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 5)|preamble+crc16",
+      "measurement": "rs_symbols_corrected",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "decoding.reed_solomon.rs_decode",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "symbols",
+      "context": {},
+      "timestamp": 1789235394.1545706
+    },
+    {
+      "id": "viterbi|block(1, 5)|preamble+crc16:preamble_correlation:ea373c0060",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 5)|preamble+crc16",
+      "measurement": "preamble_correlation",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "decoding.frame.correlate_preamble",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1545732
+    },
+    {
+      "id": "viterbi|block(1, 5)|preamble+crc32:crc_valid:bbf1e709d1",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 5)|preamble+crc32",
+      "measurement": "crc_valid",
+      "value": 0.0,
+      "value_norm": 0.5,
+      "quality": "fair",
+      "supports": false,
+      "weight": 2.0,
+      "source": "decoding.frame.frame_sync",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "fec": "none",
+        "used_soft": false
+      },
+      "timestamp": 1789235394.1545894
+    },
+    {
+      "id": "viterbi|block(1, 5)|preamble+crc32:decode_ok:cfc2e2283c",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 5)|preamble+crc32",
+      "measurement": "decode_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 1.0,
+      "source": "decoding.decoder.decode_bits",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {
+        "why": "Stream length 4096 is not a multiple of block size 5; candidate not applicable."
+      },
+      "timestamp": 1789235394.1545928
+    },
+    {
+      "id": "viterbi|block(1, 5)|preamble+crc32:viterbi_residual_errors:f7d5a69c40",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 5)|preamble+crc32",
+      "measurement": "viterbi_residual_errors",
+      "value": 0.0,
+      "value_norm": 1.0,
+      "quality": "good",
+      "supports": true,
+      "weight": 0.8,
+      "source": "decoding.convolutional.decode_viterbi",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "errors",
+      "context": {},
+      "timestamp": 1789235394.1545959
+    },
+    {
+      "id": "viterbi|block(1, 5)|preamble+crc32:rs_symbols_corrected:95595bd368",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 5)|preamble+crc32",
+      "measurement": "rs_symbols_corrected",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.5,
+      "source": "decoding.reed_solomon.rs_decode",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "symbols",
+      "context": {},
+      "timestamp": 1789235394.154599
+    },
+    {
+      "id": "viterbi|block(1, 5)|preamble+crc32:preamble_correlation:0f03e94cb8",
+      "stage": "decoding",
+      "candidate": "viterbi|block(1, 5)|preamble+crc32",
+      "measurement": "preamble_correlation",
+      "value": 0.0,
+      "value_norm": 0.0,
+      "quality": "poor",
+      "supports": true,
+      "weight": 0.6,
+      "source": "decoding.frame.correlate_preamble",
+      "provenance": "signal_inferred",
+      "family": "16QAM",
+      "unit": "",
+      "context": {},
+      "timestamp": 1789235394.1546018
+    },
+    {
+      "id": "16QAM:chain_ranked_ok:4943316c70",
+      "stage": "decoding",
+      "candidate": "16QAM",
+      "measurement": "chain_ranked_ok",
+      "value": 0.0,
+      "value_norm": 0.15,
+      "quality": "poor",
+      "supports": false,
+      "weight": 0.5,
+      "source": "decoding.decoder.search_decode",
+      "provenance": "signal_inferred",
+      "family": null,
+      "unit": "",
+      "context": {
+        "chain": "viterbi|block(1, 3)|preamble+crc16",
+        "rank": 1
+      },
+      "timestamp": 1789235394.154619
+    }
+  ],
+  "edges": [
+    {
+      "source": "BPSK:classifier_score",
+      "target": "BPSK",
+      "weight": 1.4,
+      "kind": "supports"
+    },
+    {
+      "source": "BPSK:classifier_confidence",
+      "target": "BPSK",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "BPSK:fit_fit_c42",
+      "target": "BPSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "BPSK:fit_fit_sym",
+      "target": "BPSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "BPSK:fit_fit_papr",
+      "target": "BPSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "QPSK:classifier_score",
+      "target": "QPSK",
+      "weight": 1.4,
+      "kind": "supports"
+    },
+    {
+      "source": "QPSK:classifier_confidence",
+      "target": "QPSK",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "QPSK:fit_fit_c42",
+      "target": "QPSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "QPSK:fit_fit_sym",
+      "target": "QPSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "QPSK:fit_fit_kurt",
+      "target": "QPSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "QPSK:fit_fit_papr",
+      "target": "QPSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:classifier_score",
+      "target": "16QAM",
+      "weight": 1.4,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:classifier_confidence",
+      "target": "16QAM",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:fit_fit_c42",
+      "target": "16QAM",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:fit_fit_amp",
+      "target": "16QAM",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:fit_fit_kurt",
+      "target": "16QAM",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:fit_fit_papr",
+      "target": "16QAM",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:top_margin",
+      "target": "16QAM",
+      "weight": 0.4,
+      "kind": "supports"
+    },
+    {
+      "source": "2-FSK:classifier_score",
+      "target": "2-FSK",
+      "weight": 1.4,
+      "kind": "supports"
+    },
+    {
+      "source": "2-FSK:classifier_confidence",
+      "target": "2-FSK",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "2-FSK:fit_c42_gate",
+      "target": "2-FSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "2-FSK:fit_fit_papr",
+      "target": "2-FSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "2-FSK:fit_fit_dev",
+      "target": "2-FSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "4-FSK:classifier_score",
+      "target": "4-FSK",
+      "weight": 1.4,
+      "kind": "supports"
+    },
+    {
+      "source": "4-FSK:classifier_confidence",
+      "target": "4-FSK",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "4-FSK:fit_c42_gate",
+      "target": "4-FSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "4-FSK:fit_fit_papr",
+      "target": "4-FSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "4-FSK:fit_fit_dev",
+      "target": "4-FSK",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "Noise/CW:classifier_score",
+      "target": "Noise/CW",
+      "weight": 1.4,
+      "kind": "supports"
+    },
+    {
+      "source": "Noise/CW:classifier_confidence",
+      "target": "Noise/CW",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "Noise/CW:fit_is_low_snr",
+      "target": "Noise/CW",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "Noise/CW:fit_is_flat_noise",
+      "target": "Noise/CW",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:evm_rms_percent",
+      "target": "16QAM",
+      "weight": 1.5,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:evm_db",
+      "target": "16QAM",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:num_symbols",
+      "target": "16QAM",
+      "weight": 0.35,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:residual_phase_rad",
+      "target": "16QAM",
+      "weight": 0.4,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 3)|preamble+crc16:crc_valid:8971c53a38",
+      "target": "viterbi|block(1, 3)|preamble+crc16",
+      "weight": 2.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 3)|preamble+crc16:decode_ok:31f7440f9d",
+      "target": "viterbi|block(1, 3)|preamble+crc16",
+      "weight": 1.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 3)|preamble+crc16:viterbi_residual_errors:63e22ed4e1",
+      "target": "viterbi|block(1, 3)|preamble+crc16",
+      "weight": 0.8,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 3)|preamble+crc16:rs_symbols_corrected:4e5c46ab3f",
+      "target": "viterbi|block(1, 3)|preamble+crc16",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 3)|preamble+crc16:preamble_correlation:ae09106b2e",
+      "target": "viterbi|block(1, 3)|preamble+crc16",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 3)|preamble+crc32:crc_valid:677a698bec",
+      "target": "viterbi|block(1, 3)|preamble+crc32",
+      "weight": 2.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 3)|preamble+crc32:decode_ok:5fe060e821",
+      "target": "viterbi|block(1, 3)|preamble+crc32",
+      "weight": 1.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 3)|preamble+crc32:viterbi_residual_errors:f1922c8bde",
+      "target": "viterbi|block(1, 3)|preamble+crc32",
+      "weight": 0.8,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 3)|preamble+crc32:rs_symbols_corrected:cb279cb21c",
+      "target": "viterbi|block(1, 3)|preamble+crc32",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 3)|preamble+crc32:preamble_correlation:1371b63584",
+      "target": "viterbi|block(1, 3)|preamble+crc32",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "rs255_223|block(1, 3)|preamble+crc16:crc_valid:4de4e9aba6",
+      "target": "rs255_223|block(1, 3)|preamble+crc16",
+      "weight": 2.0,
+      "kind": "supports"
+    },
+    {
+      "source": "rs255_223|block(1, 3)|preamble+crc16:decode_ok:f941c9ffcb",
+      "target": "rs255_223|block(1, 3)|preamble+crc16",
+      "weight": 1.0,
+      "kind": "supports"
+    },
+    {
+      "source": "rs255_223|block(1, 3)|preamble+crc16:viterbi_residual_errors:d568db1a04",
+      "target": "rs255_223|block(1, 3)|preamble+crc16",
+      "weight": 0.8,
+      "kind": "supports"
+    },
+    {
+      "source": "rs255_223|block(1, 3)|preamble+crc16:rs_symbols_corrected:61d3e46a2d",
+      "target": "rs255_223|block(1, 3)|preamble+crc16",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "rs255_223|block(1, 3)|preamble+crc16:preamble_correlation:7bc803aecd",
+      "target": "rs255_223|block(1, 3)|preamble+crc16",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "rs255_223|block(1, 3)|preamble+crc32:crc_valid:7d88cd8256",
+      "target": "rs255_223|block(1, 3)|preamble+crc32",
+      "weight": 2.0,
+      "kind": "supports"
+    },
+    {
+      "source": "rs255_223|block(1, 3)|preamble+crc32:decode_ok:c94bbad156",
+      "target": "rs255_223|block(1, 3)|preamble+crc32",
+      "weight": 1.0,
+      "kind": "supports"
+    },
+    {
+      "source": "rs255_223|block(1, 3)|preamble+crc32:viterbi_residual_errors:e51d26dfa7",
+      "target": "rs255_223|block(1, 3)|preamble+crc32",
+      "weight": 0.8,
+      "kind": "supports"
+    },
+    {
+      "source": "rs255_223|block(1, 3)|preamble+crc32:rs_symbols_corrected:9722ebc6a0",
+      "target": "rs255_223|block(1, 3)|preamble+crc32",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "rs255_223|block(1, 3)|preamble+crc32:preamble_correlation:f52bcf8ff1",
+      "target": "rs255_223|block(1, 3)|preamble+crc32",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi+rs255_223|block(1, 3)|preamble+crc16:crc_valid:c7f0a2c0fd",
+      "target": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "weight": 2.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi+rs255_223|block(1, 3)|preamble+crc16:decode_ok:b43f772fdb",
+      "target": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "weight": 1.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi+rs255_223|block(1, 3)|preamble+crc16:viterbi_residual_errors:aa9ed8f62c",
+      "target": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "weight": 0.8,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi+rs255_223|block(1, 3)|preamble+crc16:rs_symbols_corrected:2d10459b83",
+      "target": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi+rs255_223|block(1, 3)|preamble+crc16:preamble_correlation:8aec0b0f46",
+      "target": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi+rs255_223|block(1, 3)|preamble+crc32:crc_valid:ba57da1489",
+      "target": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "weight": 2.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi+rs255_223|block(1, 3)|preamble+crc32:decode_ok:1dda11b0fc",
+      "target": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "weight": 1.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi+rs255_223|block(1, 3)|preamble+crc32:viterbi_residual_errors:19dfd57455",
+      "target": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "weight": 0.8,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi+rs255_223|block(1, 3)|preamble+crc32:rs_symbols_corrected:fa5d894a2a",
+      "target": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi+rs255_223|block(1, 3)|preamble+crc32:preamble_correlation:89ad3089f6",
+      "target": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "none|block(1, 3)|preamble+crc16:crc_valid:e9a172129e",
+      "target": "none|block(1, 3)|preamble+crc16",
+      "weight": 2.0,
+      "kind": "supports"
+    },
+    {
+      "source": "none|block(1, 3)|preamble+crc16:decode_ok:a1adf790fc",
+      "target": "none|block(1, 3)|preamble+crc16",
+      "weight": 1.0,
+      "kind": "supports"
+    },
+    {
+      "source": "none|block(1, 3)|preamble+crc16:viterbi_residual_errors:20a8f80070",
+      "target": "none|block(1, 3)|preamble+crc16",
+      "weight": 0.8,
+      "kind": "supports"
+    },
+    {
+      "source": "none|block(1, 3)|preamble+crc16:rs_symbols_corrected:85cd3b8f77",
+      "target": "none|block(1, 3)|preamble+crc16",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "none|block(1, 3)|preamble+crc16:preamble_correlation:28152b125c",
+      "target": "none|block(1, 3)|preamble+crc16",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "none|block(1, 3)|preamble+crc32:crc_valid:f0a56ae2a2",
+      "target": "none|block(1, 3)|preamble+crc32",
+      "weight": 2.0,
+      "kind": "supports"
+    },
+    {
+      "source": "none|block(1, 3)|preamble+crc32:decode_ok:13190942e8",
+      "target": "none|block(1, 3)|preamble+crc32",
+      "weight": 1.0,
+      "kind": "supports"
+    },
+    {
+      "source": "none|block(1, 3)|preamble+crc32:viterbi_residual_errors:2f0f50a50d",
+      "target": "none|block(1, 3)|preamble+crc32",
+      "weight": 0.8,
+      "kind": "supports"
+    },
+    {
+      "source": "none|block(1, 3)|preamble+crc32:rs_symbols_corrected:b964952a8b",
+      "target": "none|block(1, 3)|preamble+crc32",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "none|block(1, 3)|preamble+crc32:preamble_correlation:d2c6ced4b2",
+      "target": "none|block(1, 3)|preamble+crc32",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 5)|preamble+crc16:crc_valid:2952dac83a",
+      "target": "viterbi|block(1, 5)|preamble+crc16",
+      "weight": 2.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 5)|preamble+crc16:decode_ok:03f55676a4",
+      "target": "viterbi|block(1, 5)|preamble+crc16",
+      "weight": 1.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 5)|preamble+crc16:viterbi_residual_errors:c1076de50f",
+      "target": "viterbi|block(1, 5)|preamble+crc16",
+      "weight": 0.8,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 5)|preamble+crc16:rs_symbols_corrected:8260d4e631",
+      "target": "viterbi|block(1, 5)|preamble+crc16",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 5)|preamble+crc16:preamble_correlation:ea373c0060",
+      "target": "viterbi|block(1, 5)|preamble+crc16",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 5)|preamble+crc32:crc_valid:bbf1e709d1",
+      "target": "viterbi|block(1, 5)|preamble+crc32",
+      "weight": 2.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 5)|preamble+crc32:decode_ok:cfc2e2283c",
+      "target": "viterbi|block(1, 5)|preamble+crc32",
+      "weight": 1.0,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 5)|preamble+crc32:viterbi_residual_errors:f7d5a69c40",
+      "target": "viterbi|block(1, 5)|preamble+crc32",
+      "weight": 0.8,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 5)|preamble+crc32:rs_symbols_corrected:95595bd368",
+      "target": "viterbi|block(1, 5)|preamble+crc32",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "viterbi|block(1, 5)|preamble+crc32:preamble_correlation:0f03e94cb8",
+      "target": "viterbi|block(1, 5)|preamble+crc32",
+      "weight": 0.6,
+      "kind": "supports"
+    },
+    {
+      "source": "16QAM:chain_ranked_ok:4943316c70",
+      "target": "16QAM",
+      "weight": 0.5,
+      "kind": "supports"
+    },
+    {
+      "source": "signal:c42_norm",
+      "target": "BPSK",
+      "weight": 0.08,
+      "kind": "trace"
+    },
+    {
+      "source": "signal:c42_norm",
+      "target": "QPSK",
+      "weight": 0.08,
+      "kind": "trace"
+    },
+    {
+      "source": "signal:c42_norm",
+      "target": "16QAM",
+      "weight": 0.08,
+      "kind": "trace"
+    },
+    {
+      "source": "signal:c21_sym",
+      "target": "BPSK",
+      "weight": 0.0806,
+      "kind": "trace"
+    },
+    {
+      "source": "signal:papr_db",
+      "target": "16QAM",
+      "weight": 0.08,
+      "kind": "trace"
+    },
+    {
+      "source": "signal:spectral_flatness",
+      "target": "Noise/CW",
+      "weight": 0.0941,
+      "kind": "trace"
+    },
+    {
+      "source": "signal:amplitude_variance",
+      "target": "16QAM",
+      "weight": 0.0916,
+      "kind": "trace"
+    }
+  ],
+  "hypotheses": [
+    {
+      "name": "BPSK",
+      "kind": "modulation",
+      "label": "BPSK",
+      "parents": [],
+      "score": 0.5071,
+      "support_weight": 0.0717,
+      "contra_weight": 0.0,
+      "contradiction_ratio": 0.0,
+      "quality": "fair",
+      "num_items": 7,
+      "context": {}
+    },
+    {
+      "name": "QPSK",
+      "kind": "modulation",
+      "label": "QPSK",
+      "parents": [],
+      "score": 0.5907,
+      "support_weight": 0.9796,
+      "contra_weight": 0.0,
+      "contradiction_ratio": 0.0,
+      "quality": "fair",
+      "num_items": 7,
+      "context": {}
+    },
+    {
+      "name": "16QAM",
+      "kind": "modulation",
+      "label": "16QAM",
+      "parents": [],
+      "score": 0.6623,
+      "support_weight": 3.0123,
+      "contra_weight": 0.075,
+      "contradiction_ratio": 0.0243,
+      "quality": "fair",
+      "num_items": 15,
+      "context": {}
+    },
+    {
+      "name": "2-FSK",
+      "kind": "modulation",
+      "label": "2-FSK",
+      "parents": [],
+      "score": 0.5378,
+      "support_weight": 0.3816,
+      "contra_weight": 0.0,
+      "contradiction_ratio": 0.0,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "4-FSK",
+      "kind": "modulation",
+      "label": "4-FSK",
+      "parents": [],
+      "score": 0.5378,
+      "support_weight": 0.3816,
+      "contra_weight": 0.0,
+      "contradiction_ratio": 0.0,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "Noise/CW",
+      "kind": "modulation",
+      "label": "Noise/CW",
+      "parents": [],
+      "score": 0.5197,
+      "support_weight": 0.1853,
+      "contra_weight": 0.0,
+      "contradiction_ratio": 0.0,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "viterbi|block(1, 3)|preamble+crc16",
+      "kind": "decode_chain",
+      "label": "deint(block)",
+      "parents": [
+        "16QAM"
+      ],
+      "score": 0.5078,
+      "support_weight": 0.8,
+      "contra_weight": 1.15,
+      "contradiction_ratio": 0.5897,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "viterbi|block(1, 3)|preamble+crc32",
+      "kind": "decode_chain",
+      "label": "deint(block)",
+      "parents": [
+        "16QAM"
+      ],
+      "score": 0.5078,
+      "support_weight": 0.8,
+      "contra_weight": 1.15,
+      "contradiction_ratio": 0.5897,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "rs255_223|block(1, 3)|preamble+crc16",
+      "kind": "decode_chain",
+      "label": "deint(block)",
+      "parents": [
+        "16QAM"
+      ],
+      "score": 0.5078,
+      "support_weight": 0.8,
+      "contra_weight": 1.15,
+      "contradiction_ratio": 0.5897,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "rs255_223|block(1, 3)|preamble+crc32",
+      "kind": "decode_chain",
+      "label": "deint(block)",
+      "parents": [
+        "16QAM"
+      ],
+      "score": 0.5078,
+      "support_weight": 0.8,
+      "contra_weight": 1.15,
+      "contradiction_ratio": 0.5897,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "viterbi+rs255_223|block(1, 3)|preamble+crc16",
+      "kind": "decode_chain",
+      "label": "deint(block)",
+      "parents": [
+        "16QAM"
+      ],
+      "score": 0.5078,
+      "support_weight": 0.8,
+      "contra_weight": 1.15,
+      "contradiction_ratio": 0.5897,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "viterbi+rs255_223|block(1, 3)|preamble+crc32",
+      "kind": "decode_chain",
+      "label": "deint(block)",
+      "parents": [
+        "16QAM"
+      ],
+      "score": 0.5078,
+      "support_weight": 0.8,
+      "contra_weight": 1.15,
+      "contradiction_ratio": 0.5897,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "none|block(1, 3)|preamble+crc16",
+      "kind": "decode_chain",
+      "label": "deint(block)",
+      "parents": [
+        "16QAM"
+      ],
+      "score": 0.5078,
+      "support_weight": 0.8,
+      "contra_weight": 1.15,
+      "contradiction_ratio": 0.5897,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "none|block(1, 3)|preamble+crc32",
+      "kind": "decode_chain",
+      "label": "deint(block)",
+      "parents": [
+        "16QAM"
+      ],
+      "score": 0.5078,
+      "support_weight": 0.8,
+      "contra_weight": 1.15,
+      "contradiction_ratio": 0.5897,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "viterbi|block(1, 5)|preamble+crc16",
+      "kind": "decode_chain",
+      "label": "deint(block)",
+      "parents": [
+        "16QAM"
+      ],
+      "score": 0.5078,
+      "support_weight": 0.8,
+      "contra_weight": 1.15,
+      "contradiction_ratio": 0.5897,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    },
+    {
+      "name": "viterbi|block(1, 5)|preamble+crc32",
+      "kind": "decode_chain",
+      "label": "deint(block)",
+      "parents": [
+        "16QAM"
+      ],
+      "score": 0.5078,
+      "support_weight": 0.8,
+      "contra_weight": 1.15,
+      "contradiction_ratio": 0.5897,
+      "quality": "fair",
+      "num_items": 5,
+      "context": {}
+    }
+  ],
+  "top_hypotheses": [
+    {
+      "name": "16QAM",
+      "kind": "modulation",
+      "score": 0.662,
+      "quality": "fair"
+    },
+    {
+      "name": "QPSK",
+      "kind": "modulation",
+      "score": 0.591,
+      "quality": "fair"
+    },
+    {
+      "name": "2-FSK",
+      "kind": "modulation",
+      "score": 0.538,
+      "quality": "fair"
+    },
+    {
+      "name": "4-FSK",
+      "kind": "modulation",
+      "score": 0.538,
+      "quality": "fair"
+    },
+    {
+      "name": "Noise/CW",
+      "kind": "modulation",
+      "score": 0.52,
+      "quality": "fair"
+    }
+  ]
+}

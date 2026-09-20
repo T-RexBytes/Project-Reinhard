@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RF Analysis Assistant — Benchmark-Advisory HITL · SIH 26147</title>
+  <meta name="description" content="Deterministic DSP reasoning engine with benchmark-corpus advisory and human-in-the-loop arbitration for unknown RF signal analysis.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────────────────────── -->
+<header>
+  <div class="brand">
+    <h1>⚡ RF Analysis Assistant</h1>
+    <span class="brand-tag">DSP decides · corpus advises · human arbitrates</span>
+  </div>
+  <div class="header-right">
+    <div class="run-badge">run&nbsp;<span id="runIdLabel">—</span></div>
+    <div id="statusDot" class="status-dot" title="API status"></div>
+  </div>
+</header>
+
+<!-- ── Nav ─────────────────────────────────────────────────────────────────── -->
+<nav id="nav">
+  <button class="pill active" data-sec="uploadSec">
+    <span class="pill-num">1</span>Signal
+  </button>
+  <button class="pill" data-sec="ledgerSec">
+    <span class="pill-num">2</span>Score&nbsp;Ledger
+  </button>
+  <button class="pill" data-sec="evidenceSec">
+    <span class="pill-num">3</span>Evidence
+  </button>
+  <button class="pill" data-sec="advisorySec">
+    <span class="pill-num">4</span>Advisory
+  </button>
+  <button class="pill" data-sec="gatesSec">
+    <span class="pill-num">5</span>HITL&nbsp;Gates
+  </button>
+  <button class="pill" data-sec="auditSec">
+    <span class="pill-num">6</span>Audit
+  </button>
+</nav>
+
+<main>
+
+  <!-- ══ 1. Signal Input ══════════════════════════════════════════════════ -->
+  <section id="uploadSec" class="sec active">
+    <div class="sec-header">
+      <h2>Signal Input</h2>
+      <p>Upload an unknown RF capture, configure parameters, then run pipeline stages</p>
+    </div>
+
+    <div class="upload-grid">
+      <!-- Left: upload + controls -->
+      <div>
+        <div class="upload-dropzone" id="dropzone">
+          <input type="file" id="fileInput" accept=".iq,.wav,.cf32,.c32,.ci16,.i16,.ci8,.i8,.cu8,.u8,.sigmf-data">
+          <span class="drop-icon">📡</span>
+          <div class="drop-label">Drop signal file here or click to browse</div>
+          <div class="drop-hint">Supported formats:</div>
+          <div style="margin-top:8px">
+            <span class="drop-badge">cf32</span>
+            <span class="drop-badge">ci16</span>
+            <span class="drop-badge">ci8</span>
+            <span class="drop-badge">cu8</span>
+            <span class="drop-badge">.wav</span>
+            <span class="drop-badge">SigMF</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="card-title">Parse Parameters</div>
+          <div class="field-row">
+            <div class="field">
+              <label>Data Type</label>
+              <select id="dataType">
+                <option value="">auto-detect</option>
+                <option value="cf32">cf32 — complex float32</option>
+                <option value="ci16">ci16 — complex int16</option>
+                <option value="ci8">ci8 — complex int8</option>
+                <option value="cu8">cu8 — complex uint8</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Sample Rate (Hz)</label>
+              <input type="text" id="sampleRate" placeholder="e.g. 25000000">
+            </div>
+          </div>
+          <div class="btn-group">
+            <button id="btnUpload" class="primary">📤 Upload &amp; Parse</button>
+          </div>
+        </div>
+
+        <!-- Signal metadata panel -->
+        <div id="signalInfo" style="margin-top:14px"></div>
+      </div>
+
+      <!-- Right: analysis controls + signal KV -->
+      <div>
+        <div id="stepButtons" class="card" hidden>
+          <div class="card-title">Pipeline Stages</div>
+          <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Run stages in order — each feeds downstream stages.</p>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="step-btn" id="stepAnalyze">
+              <button id="btnAnalyze" style="width:100%;justify-content:flex-start">
+                <span>🔍</span> Stage 2–5: detect &amp; characterize
+              </button>
+              <div class="step-badge"></div>
+            </div>
+            <div class="step-btn" id="stepHypothesize">
+              <button id="btnHypothesize" class="primary" style="width:100%;justify-content:flex-start">
+                <span>⚙️</span> Stage 6–9: hypothesize chains
+              </button>
+              <div class="step-badge"></div>
+            </div>
+            <div class="step-btn" id="stepConsult">
+              <button id="btnConsult" style="width:100%;justify-content:flex-start">
+                <span>📚</span> Consult corpus advisor
+              </button>
+              <div class="step-badge"></div>
+            </div>
+            <button id="btnCorpus" style="width:100%;justify-content:flex-start" class="sm">
+              <span>📊</span> Refresh corpus summary
+            </button>
+          </div>
+        </div>
+
+        <!-- Loading state -->
+        <div id="loadingBanner" class="loading-banner" hidden>
+          <div class="spinner"></div>
+          <span id="loadingMsg">Processing…</span>
+        </div>
+
+        <!-- Analysis head: classification candidates -->
+        <div id="analysisHead" hidden style="margin-top:14px"></div>
+      </div>
+    </div>
+
+    <!-- ── Visualizations row ──────────────────────────────────────────── -->
+    <div class="viz-grid" id="vizGrid" style="margin-top:24px">
+      <!-- Spectrogram / Waterfall -->
+      <div class="viz-card" style="grid-column: span 2">
+        <div class="viz-card-header">
+          <span class="viz-card-title">🌊 Spectrogram / Waterfall</span>
+          <span id="wfInfo" style="font:11px/1 var(--mono);color:var(--muted)"></span>
+        </div>
+        <canvas id="canvasWaterfall" height="220"></canvas>
+        <div class="wf-legend">
+          <span>Low power</span>
+          <div class="wf-legend-gradient"></div>
+          <span>High power</span>
+        </div>
+        <div id="wfPlaceholder" class="viz-placeholder">
+          <span class="viz-placeholder-icon">📊</span>
+          <span>Upload a signal and run analysis to view spectrogram</span>
+        </div>
+      </div>
+
+      <!-- PSD Spectrum -->
+      <div class="viz-card">
+        <div class="viz-card-header">
+          <span class="viz-card-title">📈 Welch PSD Spectrum</span>
+          <span id="psdInfo" style="font:11px/1 var(--mono);color:var(--muted)"></span>
+        </div>
+        <canvas id="canvasPSD" height="220"></canvas>
+        <div id="psdPlaceholder" class="viz-placeholder">
+          <span class="viz-placeholder-icon">📈</span>
+          <span>PSD will render after analysis</span>
+        </div>
+      </div>
+
+      <!-- Constellation -->
+      <div class="viz-card">
+        <div class="viz-card-header">
+          <span class="viz-card-title">✦ Constellation Diagram</span>
+          <span id="constInfo" style="font:11px/1 var(--mono);color:var(--muted)"></span>
+        </div>
+        <canvas id="canvasConst" height="220"></canvas>
+        <div id="constPlaceholder" class="viz-placeholder">
+          <span class="viz-placeholder-icon">✦</span>
+          <span>Constellation renders after hypothesize</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 2. Score Ledger ═══════════════════════════════════════════════════ -->
+  <section id="ledgerSec" class="sec">
+    <div class="sec-header">
+      <h2>Score Ledger Heatmap</h2>
+      <p>Click any cell to inspect its raw evidence items · click a row for the full WHY report</p>
+    </div>
+    <div id="ledger" class="card">
+      <div class="viz-placeholder">
+        <span class="viz-placeholder-icon">📋</span>
+        <span>Run hypothesize to populate the ledger</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 3. Evidence Trail ══════════════════════════════════════════════════ -->
+  <section id="evidenceSec" class="sec">
+    <div class="sec-header">
+      <h2>Evidence Trail</h2>
+      <p>Rendered before the advisory — corpus never anchors the verdict (§10 risk mitigation)</p>
+    </div>
+    <div id="evidenceTrail" class="card">
+      <div class="viz-placeholder">
+        <span class="viz-placeholder-icon">🔬</span>
+        <span>Run hypothesize to build the evidence graph</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 4. Advisory ════════════════════════════════════════════════════════ -->
+  <section id="advisorySec" class="sec">
+    <div class="sec-header">
+      <h2>Benchmark Corpus Advisory</h2>
+      <p>Read-only retrieval — never enters the evidence graph, never touches a composite score (§3.4 invariant)</p>
+    </div>
+
+    <div class="banner info">
+      <span class="banner-icon">📌</span>
+      <span><b>Invariant:</b> no advisory number enters the evidence graph or composite score. Advisory is a separate <code>AdvisoryRecord</code> attached to the run.</span>
+    </div>
+
+    <div id="advisoryPanel">
+      <div class="viz-placeholder" style="height:120px;border:1px dashed var(--border2);border-radius:var(--radius)">
+        <span class="viz-placeholder-icon">📚</span>
+        <span>Click "Consult corpus advisor" on the Signal tab first</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <h3 style="font-size:13px;color:var(--fg2);margin-bottom:8px">4.1 Neighbour Confusion Matrix <small>current candidates × verified corpus modulations</small></h3>
+    <div id="confusionMatrix" class="card">
+      <div class="viz-placeholder" style="height:80px">
+        <span>Requires advisor consult</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 5. HITL Gates ══════════════════════════════════════════════════════ -->
+  <section id="gatesSec" class="sec">
+    <div class="sec-header">
+      <h2>Human-in-the-Loop Gates</h2>
+      <p>Confidence-gated pauses — <strong>the pause is itself the signal that the capture is ambiguous</strong></p>
+    </div>
+    <div class="gates-grid">
+
+      <div class="gate-card" id="gateG1">
+        <div class="gate-header">
+          <div>
+            <div class="gate-id">G1</div>
+            <div class="gate-title">Modulation Classification</div>
+          </div>
+          <span class="gate-state" data-for="G1">not fired</span>
+        </div>
+        <div class="gate-body">
+          <div class="gate-trigger" data-role="G1-trigger">needs analyze run</div>
+          <div class="gate-actions" id="g1body"></div>
+          <div class="gate-log" id="g1log"></div>
+        </div>
+      </div>
+
+      <div class="gate-card" id="gateG2">
+        <div class="gate-header">
+          <div>
+            <div class="gate-id">G2</div>
+            <div class="gate-title">Decode Search Scope</div>
+          </div>
+          <span class="gate-state" data-for="G2">ready</span>
+        </div>
+        <div class="gate-body">
+          <div class="gate-trigger" data-role="G2-trigger">pin interleaver / FEC before the expensive search</div>
+          <div class="gate-actions" id="g2body"></div>
+          <div class="gate-log" id="g2log"></div>
+        </div>
+      </div>
+
+      <div class="gate-card" id="gateG3">
+        <div class="gate-header">
+          <div>
+            <div class="gate-id">G3</div>
+            <div class="gate-title">Chain Verdict</div>
+          </div>
+          <span class="gate-state" data-for="G3">not fired</span>
+        </div>
+        <div class="gate-body">
+          <div class="gate-trigger" data-role="G3-trigger">needs hypothesize run</div>
+          <div class="gate-actions" id="g3body"></div>
+          <div class="gate-log" id="g3log"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ 6. Audit ═══════════════════════════════════════════════════════════ -->
+  <section id="auditSec" class="sec">
+    <div class="sec-header">
+      <h2>Audit Matrices</h2>
+      <p>Full provenance — <em>was that the machine or the human?</em></p>
+    </div>
+
+    <div class="matrix-tables">
+      <div>
+        <div class="matrix-title">6.1 Run Audit Matrix (§11.3) — stage × gate junction</div>
+        <div id="auditMatrix" class="card">
+          <div class="viz-placeholder" style="height:80px"><span>Complete gate actions to populate</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="matrix-title">6.2 CRC / Chain Pass-Rate (§11.4) — discount human-only corpus</div>
+        <div id="crcMatrix" class="card">
+          <div class="viz-placeholder" style="height:80px"><span>Refresh corpus to populate</span></div>
+        </div>
+      </div>
+    </div>
+    <div id="corpusStat" class="corpus-stat"></div>
+  </section>
+
+</main>
+
+<!-- ── Modal overlay ───────────────────────────────────────────────────────── -->
+<div id="modalOverlay" hidden>
+  <div id="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle"></h3>
+      <button id="modalClose" title="Close (Esc)">✕</button>
+    </div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ── Toast ───────────────────────────────────────────────────────────────── -->
+<div id="toast" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
