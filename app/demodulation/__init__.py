@@ -1,0 +1,63 @@
+"""Demodulation, synchronization, pulse shaping, and constellation verification layer."""
+
+from app.demodulation.synchronizer import (
+    derotate_carrier,
+    estimate_coarse_cfo,
+    farrow3_interp,
+    farrow_strobe,
+    strobe_symbols,
+    costas_loop,
+    gardner_farrow_timing,
+    gardner_timing_recovery,
+    max_energy_timing_offset,
+    rectify_sps_by_energy,
+    recover_symbol_timing,
+    dd_phase_recovery,
+    resolve_phase_ambiguity,
+    TimingRecoveryResult,
+)
+from app.demodulation.pulseshape import (
+    design_rrc_taps,
+    apply_matched_filter,
+    estimate_rolloff,
+)
+from app.demodulation.slicer import (
+    EVMResult,
+    DemodulationResult,
+    slice_symbols,
+    compute_evm,
+    demodulate_signal,
+    get_reference_constellation,
+    BPSK_CONSTELLATION,
+    QPSK_CONSTELLATION,
+    QAM16_CONSTELLATION,
+)
+
+__all__ = [
+    "derotate_carrier",
+    "estimate_coarse_cfo",
+    "farrow3_interp",
+    "farrow_strobe",
+    "strobe_symbols",
+    "costas_loop",
+    "gardner_farrow_timing",
+    "gardner_timing_recovery",
+    "max_energy_timing_offset",
+    "rectify_sps_by_energy",
+    "recover_symbol_timing",
+    "dd_phase_recovery",
+    "resolve_phase_ambiguity",
+    "TimingRecoveryResult",
+    "design_rrc_taps",
+    "apply_matched_filter",
+    "estimate_rolloff",
+    "EVMResult",
+    "DemodulationResult",
+    "slice_symbols",
+    "compute_evm",
+    "demodulate_signal",
+    "get_reference_constellation",
+    "BPSK_CONSTELLATION",
+    "QPSK_CONSTELLATION",
+    "QAM16_CONSTELLATION",
+]

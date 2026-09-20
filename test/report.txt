@@ -1,0 +1,83 @@
+FILE: CommSignal2_demod_train_0042.sigmf-data
+FORMAT: DataType.CF32  40960 samples  fs=25000000.0  fc=2437000000.0
+
+=== DETECTION ===
+  SNR           = 14.96 dB (psd_ratio)
+  Bandwidth     = 732421.9 Hz (3db)
+  Noise floor   = -88.01 dBFS
+  Segments      = 4
+
+=== CHARACTERIZATION ===
+  Symbol rate   = 10998535.2 Hz (conf 0.90, envelope)
+  CFO           = -561523.4 Hz (conf 0.90, psd_peak)
+  C42_norm      = 0.406   C21_sym = 0.010   PAPR = 7.37 dB   kurt_amp = -0.610   inst_freq_std_norm = 0.1054
+
+=== MODULATION CLASSIFICATION ===
+  QPSK     score=0.411 conf=0.907
+  16QAM    score=0.377 conf=0.832
+  BPSK     score=0.101 conf=0.222
+  2-FSK    score=0.057 conf=0.125
+  4-FSK    score=0.051 conf=0.113
+  Noise/CW score=0.004 conf=0.050
+
+  WHY: C42=0.41 (QPSK target ~1.0), 4-fold symmetry C21_sym=0.010 (<0.25), single-shell amplitude kurtosis=-0.61 (< -0.40), PAPR=7.4 dB.
+
+=== DEMODULATION ===
+  modulation=QPSK  symbols=2554  EVM RMS=45.0% (-6.9 dB)
+  sps=16.02  CFO_rem=0.0  timing_off=6.93  phase_res=0.0000 rad  alpha=0.35
+  bits=5108  why=Demodulated QPSK: EVM=45.0% (-6.9 dB), CFO=0.0 Hz, sps=16.02, timing offset=6.933 samples, rolloff=0.35, phase rotation=0.000 rad, 2554 symbols (steady-state EVM over 2546 of 2554).
+
+=== DECODING LEADERBOARD (search_decode) ===
+  #1 spec=viterbi|block(1, 3)|preamble+crc16 ok=False viterbi_errs=0 rs_corr=0 crc_valid=None frame_offset=None
+  #2 spec=viterbi|block(1, 3)|preamble+crc32 ok=False viterbi_errs=0 rs_corr=0 crc_valid=None frame_offset=None
+  #3 spec=rs255_223|block(1, 3)|preamble+crc16 ok=False viterbi_errs=0 rs_corr=0 crc_valid=None frame_offset=None
+  #4 spec=rs255_223|block(1, 3)|preamble+crc32 ok=False viterbi_errs=0 rs_corr=0 crc_valid=None frame_offset=None
+  #5 spec=viterbi+rs255_223|block(1, 3)|preamble+crc16 ok=False viterbi_errs=0 rs_corr=0 crc_valid=None frame_offset=None
+
+=== EVIDENCE GRAPH TOP HYPOTHESES ===
+  modulation    16QAM                                            score=0.695 quality=fair items=9
+  modulation    QPSK                                             score=0.680 quality=fair items=13
+  modulation    2-FSK                                            score=0.560 quality=fair items=5
+  modulation    4-FSK                                            score=0.558 quality=fair items=5
+  modulation    BPSK                                             score=0.537 quality=fair items=7
+  decode_chain  viterbi|block(1, 3)|preamble+crc16               score=0.509 quality=fair items=5
+
+=== HYPOTHESIS ENGINE (ranked chains) ===
+  evaluated 10 chains in 273.6s
+  # 1 QPSK     sps= 1.0 block(4,8)     none           preamble+crc16     composite=0.522 unc=0.468
+  # 2 QPSK     sps= 1.0 block(4,8)     none           preamble+crc32     composite=0.522 unc=0.468
+  # 3 QPSK     sps= 1.0 block(4,8)     rs255_223      preamble+crc16     composite=0.522 unc=0.468
+  # 4 QPSK     sps= 1.0 block(4,8)     rs255_223      preamble+crc32     composite=0.522 unc=0.468
+  # 5 QPSK     sps= 1.0 block(4,8)     rs255_239      preamble+crc16     composite=0.522 unc=0.468
+  # 6 QPSK     sps= 1.0 block(4,8)     rs255_239      preamble+crc32     composite=0.522 unc=0.468
+  # 7 QPSK     sps= 1.0 block(8,16)    none           preamble+crc16     composite=0.522 unc=0.468
+  # 8 QPSK     sps= 1.0 block(8,16)    none           preamble+crc32     composite=0.522 unc=0.468
+
+=== TOP HYPOTHESIS WHY ===
+Hypothesis: QPSK -> QPSK | sps=1.00 -> block(4,8) -> none -> preamble+crc16
+Composite Score: 0.522 (mod=0.66, demod=0.40, decode=0.40)
+
+WHY this modulation:
+  Classifier: QPSK score=0.411 (supports)
+  Feature c42: fit=0.74
+  Feature papr: fit=0.98
+  Feature kurt: fit=1.00
+  Top-candidate margin: 0.034
+
+WHY this demodulation:
+  EVM RMS: 56.9% (poor)
+  EVM: -4.9 dB
+  Symbols recovered: 40960
+  Residual phase: 0.000 rad
+
+WHY this decode chain:
+  Rank 1: deint(block(4, 8)) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=1.000
+    -> Chain [none|block(4,8)|preamble+crc16]: 81920 bits -> deint(block(4, 8)),frame/preamble+crc16. Preamble locked at bit 29327 (corr 1.00); payload length scan 16..248 B.; Frame locked at bit 29327 (prea
+
+Operating context: SNR = 15.0 dB
+Uncertainty: std_dev ≈ 0.468
+
+Alternative paths considered:
+  - Chain[1aba3757]: 16QAM -> 16QAM | sps=1.00 -> none -> none -> preamble+crc16 | score=0.513
+  - Chain[cfe52b1e]: 16QAM -> 16QAM | sps=1.00 -> none -> none -> preamble+crc32 | score=0.513
+  - Chain[8215e1ea]: 16QAM -> 16QAM | sps=1.00 -> none -> rs255_223 -> preamble+crc16 | score=0.513

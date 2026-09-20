@@ -1,0 +1,12 @@
+datasets/
+data0/
+smoke_zenodo/
+smoke_zenodo_frames/
+smoke_data0/
+zenodo/
+rml/
+smoke_rml/
+__pycache__/
+*.pyc
+docs/assets/
+vid/

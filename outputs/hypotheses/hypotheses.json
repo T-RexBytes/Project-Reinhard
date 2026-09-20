@@ -1,0 +1,2867 @@
+{
+  "filename": "frame_0000.sigmf-data",
+  "top_modulations": 2,
+  "num_chains": 10,
+  "chains": [
+    {
+      "rank": 1,
+      "chain": {
+        "id": "3d86924b33f9",
+        "modulation": "16QAM",
+        "demod_params": {
+          "modulation": "16QAM",
+          "samples_per_symbol": 4.0,
+          "apply_matched_filter": true,
+          "rolloff_alpha": 0.35
+        },
+        "deinterleaver": {
+          "type": "none",
+          "block_n": null,
+          "block_m": null
+        },
+        "fec": {
+          "mode": "none",
+          "use_soft_viterbi": true
+        },
+        "frame": {
+          "frame_name": "preamble+crc16",
+          "preamble_len": 16,
+          "payload_lengths_count": 26,
+          "crc_variant": "crc16_ibm"
+        },
+        "modulation_score": 0.5799,
+        "demodulation_score": 0.4,
+        "decoding_score": 0.389,
+        "composite_score": 0.4753,
+        "why": "",
+        "score_uncertainty": 0.4525,
+        "alternative_paths": [
+          "Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475",
+          "Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383",
+          "Chain[bc389ed2]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc32 | score=0.383"
+        ],
+        "num_decoding_results": 1,
+        "modulation_evidence": [
+          {
+            "id": "16QAM:classifier_score",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_score",
+            "value": 0.57448,
+            "value_norm": 0.5745,
+            "quality": "fair",
+            "supports": true,
+            "weight": 1.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "C42_norm": 6.863,
+              "C21_sym": 0.026,
+              "papr_db": 18.54,
+              "amp_var": 0.932,
+              "kurt_amp": 15.813,
+              "phase_std": 1.809,
+              "inst_freq_std_norm": 0.24795,
+              "spectral_flatness": 0.5394
+            },
+            "timestamp": 1789240510.20691
+          },
+          {
+            "id": "16QAM:fit_fit_amp",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_amp",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069187
+          },
+          {
+            "id": "16QAM:fit_fit_kurt",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_kurt",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069206
+          },
+          {
+            "id": "16QAM:classifier_confidence",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_confidence",
+            "value": 0.49918,
+            "value_norm": 0.4992,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.6,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069118
+          },
+          {
+            "id": "16QAM:top_margin",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "top_margin",
+            "value": 0.2458,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "delta_score",
+            "context": {},
+            "timestamp": 1789240510.2069685
+          },
+          {
+            "id": "16QAM:fit_fit_papr",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_papr",
+            "value": 4e-05,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.206922
+          },
+          {
+            "id": "16QAM:fit_fit_c42",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_c42",
+            "value": 0.0,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069159
+          }
+        ],
+        "demodulation_evidence": [
+          {
+            "id": "evm:evm_rms_percent",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_rms_percent",
+            "value": 63.75463,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 1.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "%",
+            "context": {},
+            "timestamp": 1789240520.402973
+          },
+          {
+            "id": "evm_db:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_db",
+            "value": -3.90977,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 0.8,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "dB",
+            "context": {},
+            "timestamp": 1789240520.4029896
+          },
+          {
+            "id": "num_symbols:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "num_symbols",
+            "value": 4096.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "",
+            "context": {},
+            "timestamp": 1789240520.4029942
+          },
+          {
+            "id": "residual_phase:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "residual_phase",
+            "value": 0.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "rad",
+            "context": {},
+            "timestamp": 1789240520.403002
+          }
+        ],
+        "decoding_evidence": [],
+        "decoding_results": [
+          {
+            "spec_name": "none|none|preamble+crc16",
+            "chain": "deint(none) -> frame/preamble+crc16",
+            "ok": false,
+            "crc_valid": false,
+            "payload_bits_sample": [
+              178,
+              127,
+              255,
+              129,
+              186,
+              117,
+              223,
+              255,
+              247,
+              83,
+              221,
+              255,
+              245,
+              117,
+              70,
+              79
+            ],
+            "payload_bytes_hex": "b27fff81ba75dffff753ddfff575464f",
+            "num_viterbi_errors": 0,
+            "num_rs_symbols_corrected": 0,
+            "preamble_correlation": 0.938,
+            "frame_offset": 2999,
+            "used_soft": false,
+            "why": "Chain [none|none|preamble+crc16]: 16384 bits -> deint(none),frame/preamble+crc16. Preamble locked at bit 2999 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 2999 (preamble corr 0.94); payload 16 B, CRC-16 MISMATCH. (no length CRC-verified) CRC=FAIL; viterbi residual hard-errs=0; RS symbols corrected=0."
+          }
+        ]
+      },
+      "why": "Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16\nComposite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)\n\nWHY this modulation:\n  Classifier: 16QAM score=0.574 (supports)\n  Feature amp: fit=1.00\n  Feature kurt: fit=1.00\n  Feature papr: fit=0.00\n  Top-candidate margin: 0.246\n\nWHY this demodulation:\n  EVM RMS: 63.8% (poor)\n  EVM: -3.9 dB\n  Symbols recovered: 4096\n  Residual phase: 0.000 rad\n\nWHY this decode chain:\n  Rank 1: deint(none) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938\n    -> Chain [none|none|preamble+crc16]: 16384 bits -> deint(none),frame/preamble+crc16. Preamble locked at bit 2999 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 2999 (preamble corr 0.94)\n\nOperating context: SNR = 12.4 dB\nUncertainty: std_dev \u2248 0.452\n\nAlternative paths considered:\n  - Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475\n  - Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383\n  - Chain[bc389ed2]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc32 | score=0.383",
+      "why_short": "moderate 16QAM classifier support (0.58); poor/no demod; no valid frame | composite=0.475"
+    },
+    {
+      "rank": 2,
+      "chain": {
+        "id": "6b86f3fe0cef",
+        "modulation": "16QAM",
+        "demod_params": {
+          "modulation": "16QAM",
+          "samples_per_symbol": 4.0,
+          "apply_matched_filter": true,
+          "rolloff_alpha": 0.35
+        },
+        "deinterleaver": {
+          "type": "none",
+          "block_n": null,
+          "block_m": null
+        },
+        "fec": {
+          "mode": "none",
+          "use_soft_viterbi": true
+        },
+        "frame": {
+          "frame_name": "preamble+crc32",
+          "preamble_len": 16,
+          "payload_lengths_count": 26,
+          "crc_variant": "crc32_ieee"
+        },
+        "modulation_score": 0.5799,
+        "demodulation_score": 0.4,
+        "decoding_score": 0.389,
+        "composite_score": 0.4753,
+        "why": "",
+        "score_uncertainty": 0.4525,
+        "alternative_paths": [
+          "Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475",
+          "Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383",
+          "Chain[bc389ed2]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc32 | score=0.383"
+        ],
+        "num_decoding_results": 1,
+        "modulation_evidence": [
+          {
+            "id": "16QAM:classifier_score",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_score",
+            "value": 0.57448,
+            "value_norm": 0.5745,
+            "quality": "fair",
+            "supports": true,
+            "weight": 1.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "C42_norm": 6.863,
+              "C21_sym": 0.026,
+              "papr_db": 18.54,
+              "amp_var": 0.932,
+              "kurt_amp": 15.813,
+              "phase_std": 1.809,
+              "inst_freq_std_norm": 0.24795,
+              "spectral_flatness": 0.5394
+            },
+            "timestamp": 1789240510.20691
+          },
+          {
+            "id": "16QAM:fit_fit_amp",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_amp",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069187
+          },
+          {
+            "id": "16QAM:fit_fit_kurt",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_kurt",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069206
+          },
+          {
+            "id": "16QAM:classifier_confidence",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_confidence",
+            "value": 0.49918,
+            "value_norm": 0.4992,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.6,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069118
+          },
+          {
+            "id": "16QAM:top_margin",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "top_margin",
+            "value": 0.2458,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "delta_score",
+            "context": {},
+            "timestamp": 1789240510.2069685
+          },
+          {
+            "id": "16QAM:fit_fit_papr",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_papr",
+            "value": 4e-05,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.206922
+          },
+          {
+            "id": "16QAM:fit_fit_c42",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_c42",
+            "value": 0.0,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069159
+          }
+        ],
+        "demodulation_evidence": [
+          {
+            "id": "evm:evm_rms_percent",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_rms_percent",
+            "value": 63.75463,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 1.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "%",
+            "context": {},
+            "timestamp": 1789240520.4030564
+          },
+          {
+            "id": "evm_db:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_db",
+            "value": -3.90977,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 0.8,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "dB",
+            "context": {},
+            "timestamp": 1789240520.4030588
+          },
+          {
+            "id": "num_symbols:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "num_symbols",
+            "value": 4096.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "",
+            "context": {},
+            "timestamp": 1789240520.4030612
+          },
+          {
+            "id": "residual_phase:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "residual_phase",
+            "value": 0.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "rad",
+            "context": {},
+            "timestamp": 1789240520.403064
+          }
+        ],
+        "decoding_evidence": [],
+        "decoding_results": [
+          {
+            "spec_name": "none|none|preamble+crc32",
+            "chain": "deint(none) -> frame/preamble+crc32",
+            "ok": false,
+            "crc_valid": false,
+            "payload_bits_sample": [
+              178,
+              127,
+              255,
+              129,
+              186,
+              117,
+              223,
+              255,
+              247,
+              83,
+              221,
+              255,
+              245,
+              117,
+              70,
+              79
+            ],
+            "payload_bytes_hex": "b27fff81ba75dffff753ddfff575464f",
+            "num_viterbi_errors": 0,
+            "num_rs_symbols_corrected": 0,
+            "preamble_correlation": 0.938,
+            "frame_offset": 2999,
+            "used_soft": false,
+            "why": "Chain [none|none|preamble+crc32]: 16384 bits -> deint(none),frame/preamble+crc32. Preamble locked at bit 2999 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 2999 (preamble corr 0.94); payload 16 B, CRC-32 MISMATCH. (no length CRC-verified) CRC=FAIL; viterbi residual hard-errs=0; RS symbols corrected=0."
+          }
+        ]
+      },
+      "why": "Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32\nComposite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)\n\nWHY this modulation:\n  Classifier: 16QAM score=0.574 (supports)\n  Feature amp: fit=1.00\n  Feature kurt: fit=1.00\n  Feature papr: fit=0.00\n  Top-candidate margin: 0.246\n\nWHY this demodulation:\n  EVM RMS: 63.8% (poor)\n  EVM: -3.9 dB\n  Symbols recovered: 4096\n  Residual phase: 0.000 rad\n\nWHY this decode chain:\n  Rank 1: deint(none) -> frame/preamble+crc32 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938\n    -> Chain [none|none|preamble+crc32]: 16384 bits -> deint(none),frame/preamble+crc32. Preamble locked at bit 2999 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 2999 (preamble corr 0.94)\n\nOperating context: SNR = 12.4 dB\nUncertainty: std_dev \u2248 0.452\n\nAlternative paths considered:\n  - Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475\n  - Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383\n  - Chain[bc389ed2]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc32 | score=0.383",
+      "why_short": "moderate 16QAM classifier support (0.58); poor/no demod; no valid frame | composite=0.475"
+    },
+    {
+      "rank": 3,
+      "chain": {
+        "id": "8db8c46d60e6",
+        "modulation": "16QAM",
+        "demod_params": {
+          "modulation": "16QAM",
+          "samples_per_symbol": 4.0,
+          "apply_matched_filter": true,
+          "rolloff_alpha": 0.35
+        },
+        "deinterleaver": {
+          "type": "none",
+          "block_n": null,
+          "block_m": null
+        },
+        "fec": {
+          "mode": "rs255_223",
+          "use_soft_viterbi": true
+        },
+        "frame": {
+          "frame_name": "preamble+crc16",
+          "preamble_len": 16,
+          "payload_lengths_count": 26,
+          "crc_variant": "crc16_ibm"
+        },
+        "modulation_score": 0.5799,
+        "demodulation_score": 0.4,
+        "decoding_score": 0.389,
+        "composite_score": 0.4753,
+        "why": "",
+        "score_uncertainty": 0.4525,
+        "alternative_paths": [
+          "Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475",
+          "Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475",
+          "Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383"
+        ],
+        "num_decoding_results": 1,
+        "modulation_evidence": [
+          {
+            "id": "16QAM:classifier_score",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_score",
+            "value": 0.57448,
+            "value_norm": 0.5745,
+            "quality": "fair",
+            "supports": true,
+            "weight": 1.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "C42_norm": 6.863,
+              "C21_sym": 0.026,
+              "papr_db": 18.54,
+              "amp_var": 0.932,
+              "kurt_amp": 15.813,
+              "phase_std": 1.809,
+              "inst_freq_std_norm": 0.24795,
+              "spectral_flatness": 0.5394
+            },
+            "timestamp": 1789240510.20691
+          },
+          {
+            "id": "16QAM:fit_fit_amp",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_amp",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069187
+          },
+          {
+            "id": "16QAM:fit_fit_kurt",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_kurt",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069206
+          },
+          {
+            "id": "16QAM:classifier_confidence",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_confidence",
+            "value": 0.49918,
+            "value_norm": 0.4992,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.6,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069118
+          },
+          {
+            "id": "16QAM:top_margin",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "top_margin",
+            "value": 0.2458,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "delta_score",
+            "context": {},
+            "timestamp": 1789240510.2069685
+          },
+          {
+            "id": "16QAM:fit_fit_papr",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_papr",
+            "value": 4e-05,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.206922
+          },
+          {
+            "id": "16QAM:fit_fit_c42",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_c42",
+            "value": 0.0,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069159
+          }
+        ],
+        "demodulation_evidence": [
+          {
+            "id": "evm:evm_rms_percent",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_rms_percent",
+            "value": 63.75463,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 1.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "%",
+            "context": {},
+            "timestamp": 1789240520.4031217
+          },
+          {
+            "id": "evm_db:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_db",
+            "value": -3.90977,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 0.8,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "dB",
+            "context": {},
+            "timestamp": 1789240520.403123
+          },
+          {
+            "id": "num_symbols:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "num_symbols",
+            "value": 4096.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "",
+            "context": {},
+            "timestamp": 1789240520.4031248
+          },
+          {
+            "id": "residual_phase:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "residual_phase",
+            "value": 0.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "rad",
+            "context": {},
+            "timestamp": 1789240520.4031265
+          }
+        ],
+        "decoding_evidence": [],
+        "decoding_results": [
+          {
+            "spec_name": "rs255_223|none|preamble+crc16",
+            "chain": "deint(none) -> RS 255,223 (0 sym corr) -> frame/preamble+crc16",
+            "ok": false,
+            "crc_valid": false,
+            "payload_bits_sample": [
+              178,
+              127,
+              255,
+              129,
+              186,
+              117,
+              223,
+              255,
+              247,
+              83,
+              221,
+              255,
+              245,
+              117,
+              70,
+              79
+            ],
+            "payload_bytes_hex": "b27fff81ba75dffff753ddfff575464f",
+            "num_viterbi_errors": 0,
+            "num_rs_symbols_corrected": 0,
+            "preamble_correlation": 0.938,
+            "frame_offset": 2487,
+            "used_soft": false,
+            "why": "Chain [rs255_223|none|preamble+crc16]: 14272 bits -> deint(none),RS 255,223 (0 sym corr),frame/preamble+crc16. Preamble locked at bit 2487 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 2487 (preamble corr 0.94); payload 16 B, CRC-16 MISMATCH. (no length CRC-verified) CRC=FAIL; viterbi residual hard-errs=0; RS symbols corrected=0."
+          }
+        ]
+      },
+      "why": "Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_223 -> preamble+crc16\nComposite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)\n\nWHY this modulation:\n  Classifier: 16QAM score=0.574 (supports)\n  Feature amp: fit=1.00\n  Feature kurt: fit=1.00\n  Feature papr: fit=0.00\n  Top-candidate margin: 0.246\n\nWHY this demodulation:\n  EVM RMS: 63.8% (poor)\n  EVM: -3.9 dB\n  Symbols recovered: 4096\n  Residual phase: 0.000 rad\n\nWHY this decode chain:\n  Rank 1: deint(none) -> RS 255,223 (0 sym corr) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938\n    -> Chain [rs255_223|none|preamble+crc16]: 14272 bits -> deint(none),RS 255,223 (0 sym corr),frame/preamble+crc16. Preamble locked at bit 2487 (corr 0.94); payload length scan 16..248 B.; Frame locked at \n\nOperating context: SNR = 12.4 dB\nUncertainty: std_dev \u2248 0.452\n\nAlternative paths considered:\n  - Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475\n  - Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475\n  - Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383",
+      "why_short": "moderate 16QAM classifier support (0.58); poor/no demod; no valid frame | composite=0.475"
+    },
+    {
+      "rank": 4,
+      "chain": {
+        "id": "e45ad9d3a0b7",
+        "modulation": "16QAM",
+        "demod_params": {
+          "modulation": "16QAM",
+          "samples_per_symbol": 4.0,
+          "apply_matched_filter": true,
+          "rolloff_alpha": 0.35
+        },
+        "deinterleaver": {
+          "type": "none",
+          "block_n": null,
+          "block_m": null
+        },
+        "fec": {
+          "mode": "rs255_223",
+          "use_soft_viterbi": true
+        },
+        "frame": {
+          "frame_name": "preamble+crc32",
+          "preamble_len": 16,
+          "payload_lengths_count": 26,
+          "crc_variant": "crc32_ieee"
+        },
+        "modulation_score": 0.5799,
+        "demodulation_score": 0.4,
+        "decoding_score": 0.389,
+        "composite_score": 0.4753,
+        "why": "",
+        "score_uncertainty": 0.4525,
+        "alternative_paths": [
+          "Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475",
+          "Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475",
+          "Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383"
+        ],
+        "num_decoding_results": 1,
+        "modulation_evidence": [
+          {
+            "id": "16QAM:classifier_score",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_score",
+            "value": 0.57448,
+            "value_norm": 0.5745,
+            "quality": "fair",
+            "supports": true,
+            "weight": 1.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "C42_norm": 6.863,
+              "C21_sym": 0.026,
+              "papr_db": 18.54,
+              "amp_var": 0.932,
+              "kurt_amp": 15.813,
+              "phase_std": 1.809,
+              "inst_freq_std_norm": 0.24795,
+              "spectral_flatness": 0.5394
+            },
+            "timestamp": 1789240510.20691
+          },
+          {
+            "id": "16QAM:fit_fit_amp",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_amp",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069187
+          },
+          {
+            "id": "16QAM:fit_fit_kurt",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_kurt",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069206
+          },
+          {
+            "id": "16QAM:classifier_confidence",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_confidence",
+            "value": 0.49918,
+            "value_norm": 0.4992,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.6,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069118
+          },
+          {
+            "id": "16QAM:top_margin",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "top_margin",
+            "value": 0.2458,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "delta_score",
+            "context": {},
+            "timestamp": 1789240510.2069685
+          },
+          {
+            "id": "16QAM:fit_fit_papr",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_papr",
+            "value": 4e-05,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.206922
+          },
+          {
+            "id": "16QAM:fit_fit_c42",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_c42",
+            "value": 0.0,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069159
+          }
+        ],
+        "demodulation_evidence": [
+          {
+            "id": "evm:evm_rms_percent",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_rms_percent",
+            "value": 63.75463,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 1.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "%",
+            "context": {},
+            "timestamp": 1789240520.4031384
+          },
+          {
+            "id": "evm_db:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_db",
+            "value": -3.90977,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 0.8,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "dB",
+            "context": {},
+            "timestamp": 1789240520.4031396
+          },
+          {
+            "id": "num_symbols:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "num_symbols",
+            "value": 4096.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "",
+            "context": {},
+            "timestamp": 1789240520.4031413
+          },
+          {
+            "id": "residual_phase:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "residual_phase",
+            "value": 0.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "rad",
+            "context": {},
+            "timestamp": 1789240520.4031432
+          }
+        ],
+        "decoding_evidence": [],
+        "decoding_results": [
+          {
+            "spec_name": "rs255_223|none|preamble+crc32",
+            "chain": "deint(none) -> RS 255,223 (0 sym corr) -> frame/preamble+crc32",
+            "ok": false,
+            "crc_valid": false,
+            "payload_bits_sample": [
+              178,
+              127,
+              255,
+              129,
+              186,
+              117,
+              223,
+              255,
+              247,
+              83,
+              221,
+              255,
+              245,
+              117,
+              70,
+              79
+            ],
+            "payload_bytes_hex": "b27fff81ba75dffff753ddfff575464f",
+            "num_viterbi_errors": 0,
+            "num_rs_symbols_corrected": 0,
+            "preamble_correlation": 0.938,
+            "frame_offset": 2487,
+            "used_soft": false,
+            "why": "Chain [rs255_223|none|preamble+crc32]: 14272 bits -> deint(none),RS 255,223 (0 sym corr),frame/preamble+crc32. Preamble locked at bit 2487 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 2487 (preamble corr 0.94); payload 16 B, CRC-32 MISMATCH. (no length CRC-verified) CRC=FAIL; viterbi residual hard-errs=0; RS symbols corrected=0."
+          }
+        ]
+      },
+      "why": "Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_223 -> preamble+crc32\nComposite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)\n\nWHY this modulation:\n  Classifier: 16QAM score=0.574 (supports)\n  Feature amp: fit=1.00\n  Feature kurt: fit=1.00\n  Feature papr: fit=0.00\n  Top-candidate margin: 0.246\n\nWHY this demodulation:\n  EVM RMS: 63.8% (poor)\n  EVM: -3.9 dB\n  Symbols recovered: 4096\n  Residual phase: 0.000 rad\n\nWHY this decode chain:\n  Rank 1: deint(none) -> RS 255,223 (0 sym corr) -> frame/preamble+crc32 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938\n    -> Chain [rs255_223|none|preamble+crc32]: 14272 bits -> deint(none),RS 255,223 (0 sym corr),frame/preamble+crc32. Preamble locked at bit 2487 (corr 0.94); payload length scan 16..248 B.; Frame locked at \n\nOperating context: SNR = 12.4 dB\nUncertainty: std_dev \u2248 0.452",
+      "why_short": "moderate 16QAM classifier support (0.58); poor/no demod; no valid frame | composite=0.475"
+    },
+    {
+      "rank": 5,
+      "chain": {
+        "id": "388ec4dd97a9",
+        "modulation": "16QAM",
+        "demod_params": {
+          "modulation": "16QAM",
+          "samples_per_symbol": 4.0,
+          "apply_matched_filter": true,
+          "rolloff_alpha": 0.35
+        },
+        "deinterleaver": {
+          "type": "none",
+          "block_n": null,
+          "block_m": null
+        },
+        "fec": {
+          "mode": "rs255_239",
+          "use_soft_viterbi": true
+        },
+        "frame": {
+          "frame_name": "preamble+crc16",
+          "preamble_len": 16,
+          "payload_lengths_count": 26,
+          "crc_variant": "crc16_ibm"
+        },
+        "modulation_score": 0.5799,
+        "demodulation_score": 0.4,
+        "decoding_score": 0.389,
+        "composite_score": 0.4753,
+        "why": "",
+        "score_uncertainty": 0.4525,
+        "alternative_paths": [
+          "Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475",
+          "Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475",
+          "Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383"
+        ],
+        "num_decoding_results": 1,
+        "modulation_evidence": [
+          {
+            "id": "16QAM:classifier_score",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_score",
+            "value": 0.57448,
+            "value_norm": 0.5745,
+            "quality": "fair",
+            "supports": true,
+            "weight": 1.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "C42_norm": 6.863,
+              "C21_sym": 0.026,
+              "papr_db": 18.54,
+              "amp_var": 0.932,
+              "kurt_amp": 15.813,
+              "phase_std": 1.809,
+              "inst_freq_std_norm": 0.24795,
+              "spectral_flatness": 0.5394
+            },
+            "timestamp": 1789240510.20691
+          },
+          {
+            "id": "16QAM:fit_fit_amp",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_amp",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069187
+          },
+          {
+            "id": "16QAM:fit_fit_kurt",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_kurt",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069206
+          },
+          {
+            "id": "16QAM:classifier_confidence",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_confidence",
+            "value": 0.49918,
+            "value_norm": 0.4992,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.6,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069118
+          },
+          {
+            "id": "16QAM:top_margin",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "top_margin",
+            "value": 0.2458,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "delta_score",
+            "context": {},
+            "timestamp": 1789240510.2069685
+          },
+          {
+            "id": "16QAM:fit_fit_papr",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_papr",
+            "value": 4e-05,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.206922
+          },
+          {
+            "id": "16QAM:fit_fit_c42",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_c42",
+            "value": 0.0,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069159
+          }
+        ],
+        "demodulation_evidence": [
+          {
+            "id": "evm:evm_rms_percent",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_rms_percent",
+            "value": 63.75463,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 1.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "%",
+            "context": {},
+            "timestamp": 1789240520.403154
+          },
+          {
+            "id": "evm_db:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_db",
+            "value": -3.90977,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 0.8,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "dB",
+            "context": {},
+            "timestamp": 1789240520.403155
+          },
+          {
+            "id": "num_symbols:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "num_symbols",
+            "value": 4096.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "",
+            "context": {},
+            "timestamp": 1789240520.403157
+          },
+          {
+            "id": "residual_phase:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "residual_phase",
+            "value": 0.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "rad",
+            "context": {},
+            "timestamp": 1789240520.403159
+          }
+        ],
+        "decoding_evidence": [],
+        "decoding_results": [
+          {
+            "spec_name": "rs255_239|none|preamble+crc16",
+            "chain": "deint(none) -> RS 255,239 (0 sym corr) -> frame/preamble+crc16",
+            "ok": false,
+            "crc_valid": false,
+            "payload_bits_sample": [
+              178,
+              127,
+              255,
+              129,
+              186,
+              117,
+              223,
+              255,
+              247,
+              83,
+              221,
+              255,
+              245,
+              117,
+              70,
+              79
+            ],
+            "payload_bytes_hex": "b27fff81ba75dffff753ddfff575464f",
+            "num_viterbi_errors": 0,
+            "num_rs_symbols_corrected": 0,
+            "preamble_correlation": 0.938,
+            "frame_offset": 2743,
+            "used_soft": false,
+            "why": "Chain [rs255_239|none|preamble+crc16]: 15296 bits -> deint(none),RS 255,239 (0 sym corr),frame/preamble+crc16. Preamble locked at bit 2743 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 2743 (preamble corr 0.94); payload 16 B, CRC-16 MISMATCH. (no length CRC-verified) CRC=FAIL; viterbi residual hard-errs=0; RS symbols corrected=0."
+          }
+        ]
+      },
+      "why": "Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_239 -> preamble+crc16\nComposite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)\n\nWHY this modulation:\n  Classifier: 16QAM score=0.574 (supports)\n  Feature amp: fit=1.00\n  Feature kurt: fit=1.00\n  Feature papr: fit=0.00\n  Top-candidate margin: 0.246\n\nWHY this demodulation:\n  EVM RMS: 63.8% (poor)\n  EVM: -3.9 dB\n  Symbols recovered: 4096\n  Residual phase: 0.000 rad\n\nWHY this decode chain:\n  Rank 1: deint(none) -> RS 255,239 (0 sym corr) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938\n    -> Chain [rs255_239|none|preamble+crc16]: 15296 bits -> deint(none),RS 255,239 (0 sym corr),frame/preamble+crc16. Preamble locked at bit 2743 (corr 0.94); payload length scan 16..248 B.; Frame locked at \n\nOperating context: SNR = 12.4 dB\nUncertainty: std_dev \u2248 0.452",
+      "why_short": "moderate 16QAM classifier support (0.58); poor/no demod; no valid frame | composite=0.475"
+    },
+    {
+      "rank": 6,
+      "chain": {
+        "id": "ac8ef0ceebfa",
+        "modulation": "16QAM",
+        "demod_params": {
+          "modulation": "16QAM",
+          "samples_per_symbol": 4.0,
+          "apply_matched_filter": true,
+          "rolloff_alpha": 0.35
+        },
+        "deinterleaver": {
+          "type": "none",
+          "block_n": null,
+          "block_m": null
+        },
+        "fec": {
+          "mode": "rs255_239",
+          "use_soft_viterbi": true
+        },
+        "frame": {
+          "frame_name": "preamble+crc32",
+          "preamble_len": 16,
+          "payload_lengths_count": 26,
+          "crc_variant": "crc32_ieee"
+        },
+        "modulation_score": 0.5799,
+        "demodulation_score": 0.4,
+        "decoding_score": 0.389,
+        "composite_score": 0.4753,
+        "why": "",
+        "score_uncertainty": 0.4525,
+        "alternative_paths": [
+          "Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475",
+          "Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475",
+          "Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383"
+        ],
+        "num_decoding_results": 1,
+        "modulation_evidence": [
+          {
+            "id": "16QAM:classifier_score",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_score",
+            "value": 0.57448,
+            "value_norm": 0.5745,
+            "quality": "fair",
+            "supports": true,
+            "weight": 1.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "C42_norm": 6.863,
+              "C21_sym": 0.026,
+              "papr_db": 18.54,
+              "amp_var": 0.932,
+              "kurt_amp": 15.813,
+              "phase_std": 1.809,
+              "inst_freq_std_norm": 0.24795,
+              "spectral_flatness": 0.5394
+            },
+            "timestamp": 1789240510.20691
+          },
+          {
+            "id": "16QAM:fit_fit_amp",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_amp",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069187
+          },
+          {
+            "id": "16QAM:fit_fit_kurt",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_kurt",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069206
+          },
+          {
+            "id": "16QAM:classifier_confidence",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_confidence",
+            "value": 0.49918,
+            "value_norm": 0.4992,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.6,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069118
+          },
+          {
+            "id": "16QAM:top_margin",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "top_margin",
+            "value": 0.2458,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "delta_score",
+            "context": {},
+            "timestamp": 1789240510.2069685
+          },
+          {
+            "id": "16QAM:fit_fit_papr",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_papr",
+            "value": 4e-05,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.206922
+          },
+          {
+            "id": "16QAM:fit_fit_c42",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_c42",
+            "value": 0.0,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069159
+          }
+        ],
+        "demodulation_evidence": [
+          {
+            "id": "evm:evm_rms_percent",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_rms_percent",
+            "value": 63.75463,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 1.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "%",
+            "context": {},
+            "timestamp": 1789240520.4031687
+          },
+          {
+            "id": "evm_db:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_db",
+            "value": -3.90977,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 0.8,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "dB",
+            "context": {},
+            "timestamp": 1789240520.4031699
+          },
+          {
+            "id": "num_symbols:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "num_symbols",
+            "value": 4096.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "",
+            "context": {},
+            "timestamp": 1789240520.4031785
+          },
+          {
+            "id": "residual_phase:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "residual_phase",
+            "value": 0.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "rad",
+            "context": {},
+            "timestamp": 1789240520.4031806
+          }
+        ],
+        "decoding_evidence": [],
+        "decoding_results": [
+          {
+            "spec_name": "rs255_239|none|preamble+crc32",
+            "chain": "deint(none) -> RS 255,239 (0 sym corr) -> frame/preamble+crc32",
+            "ok": false,
+            "crc_valid": false,
+            "payload_bits_sample": [
+              178,
+              127,
+              255,
+              129,
+              186,
+              117,
+              223,
+              255,
+              247,
+              83,
+              221,
+              255,
+              245,
+              117,
+              70,
+              79
+            ],
+            "payload_bytes_hex": "b27fff81ba75dffff753ddfff575464f",
+            "num_viterbi_errors": 0,
+            "num_rs_symbols_corrected": 0,
+            "preamble_correlation": 0.938,
+            "frame_offset": 2743,
+            "used_soft": false,
+            "why": "Chain [rs255_239|none|preamble+crc32]: 15296 bits -> deint(none),RS 255,239 (0 sym corr),frame/preamble+crc32. Preamble locked at bit 2743 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 2743 (preamble corr 0.94); payload 16 B, CRC-32 MISMATCH. (no length CRC-verified) CRC=FAIL; viterbi residual hard-errs=0; RS symbols corrected=0."
+          }
+        ]
+      },
+      "why": "Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> rs255_239 -> preamble+crc32\nComposite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)\n\nWHY this modulation:\n  Classifier: 16QAM score=0.574 (supports)\n  Feature amp: fit=1.00\n  Feature kurt: fit=1.00\n  Feature papr: fit=0.00\n  Top-candidate margin: 0.246\n\nWHY this demodulation:\n  EVM RMS: 63.8% (poor)\n  EVM: -3.9 dB\n  Symbols recovered: 4096\n  Residual phase: 0.000 rad\n\nWHY this decode chain:\n  Rank 1: deint(none) -> RS 255,239 (0 sym corr) -> frame/preamble+crc32 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938\n    -> Chain [rs255_239|none|preamble+crc32]: 15296 bits -> deint(none),RS 255,239 (0 sym corr),frame/preamble+crc32. Preamble locked at bit 2743 (corr 0.94); payload length scan 16..248 B.; Frame locked at \n\nOperating context: SNR = 12.4 dB\nUncertainty: std_dev \u2248 0.452",
+      "why_short": "moderate 16QAM classifier support (0.58); poor/no demod; no valid frame | composite=0.475"
+    },
+    {
+      "rank": 7,
+      "chain": {
+        "id": "2a27af0d7a07",
+        "modulation": "16QAM",
+        "demod_params": {
+          "modulation": "16QAM",
+          "samples_per_symbol": 4.0,
+          "apply_matched_filter": true,
+          "rolloff_alpha": 0.35
+        },
+        "deinterleaver": {
+          "type": "block",
+          "block_n": 4,
+          "block_m": 8
+        },
+        "fec": {
+          "mode": "none",
+          "use_soft_viterbi": true
+        },
+        "frame": {
+          "frame_name": "preamble+crc16",
+          "preamble_len": 16,
+          "payload_lengths_count": 26,
+          "crc_variant": "crc16_ibm"
+        },
+        "modulation_score": 0.5799,
+        "demodulation_score": 0.4,
+        "decoding_score": 0.389,
+        "composite_score": 0.4753,
+        "why": "",
+        "score_uncertainty": 0.4525,
+        "alternative_paths": [
+          "Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475",
+          "Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475",
+          "Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383"
+        ],
+        "num_decoding_results": 1,
+        "modulation_evidence": [
+          {
+            "id": "16QAM:classifier_score",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_score",
+            "value": 0.57448,
+            "value_norm": 0.5745,
+            "quality": "fair",
+            "supports": true,
+            "weight": 1.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "C42_norm": 6.863,
+              "C21_sym": 0.026,
+              "papr_db": 18.54,
+              "amp_var": 0.932,
+              "kurt_amp": 15.813,
+              "phase_std": 1.809,
+              "inst_freq_std_norm": 0.24795,
+              "spectral_flatness": 0.5394
+            },
+            "timestamp": 1789240510.20691
+          },
+          {
+            "id": "16QAM:fit_fit_amp",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_amp",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069187
+          },
+          {
+            "id": "16QAM:fit_fit_kurt",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_kurt",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069206
+          },
+          {
+            "id": "16QAM:classifier_confidence",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_confidence",
+            "value": 0.49918,
+            "value_norm": 0.4992,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.6,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069118
+          },
+          {
+            "id": "16QAM:top_margin",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "top_margin",
+            "value": 0.2458,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "delta_score",
+            "context": {},
+            "timestamp": 1789240510.2069685
+          },
+          {
+            "id": "16QAM:fit_fit_papr",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_papr",
+            "value": 4e-05,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.206922
+          },
+          {
+            "id": "16QAM:fit_fit_c42",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_c42",
+            "value": 0.0,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069159
+          }
+        ],
+        "demodulation_evidence": [
+          {
+            "id": "evm:evm_rms_percent",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_rms_percent",
+            "value": 63.75463,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 1.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "%",
+            "context": {},
+            "timestamp": 1789240520.4032567
+          },
+          {
+            "id": "evm_db:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_db",
+            "value": -3.90977,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 0.8,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "dB",
+            "context": {},
+            "timestamp": 1789240520.4032586
+          },
+          {
+            "id": "num_symbols:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "num_symbols",
+            "value": 4096.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "",
+            "context": {},
+            "timestamp": 1789240520.4032626
+          },
+          {
+            "id": "residual_phase:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "residual_phase",
+            "value": 0.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "rad",
+            "context": {},
+            "timestamp": 1789240520.4032652
+          }
+        ],
+        "decoding_evidence": [],
+        "decoding_results": [
+          {
+            "spec_name": "none|block(4,8)|preamble+crc16",
+            "chain": "deint(block(4, 8)) -> frame/preamble+crc16",
+            "ok": false,
+            "crc_valid": false,
+            "payload_bits_sample": [
+              250,
+              118,
+              87,
+              66,
+              223,
+              116,
+              223,
+              116,
+              94,
+              23,
+              245,
+              231,
+              159,
+              179,
+              252,
+              226
+            ],
+            "payload_bytes_hex": "fa765742df74df745e17f5e79fb3fce2",
+            "num_viterbi_errors": 0,
+            "num_rs_symbols_corrected": 0,
+            "preamble_correlation": 0.938,
+            "frame_offset": 352,
+            "used_soft": false,
+            "why": "Chain [none|block(4,8)|preamble+crc16]: 16384 bits -> deint(block(4, 8)),frame/preamble+crc16. Preamble locked at bit 352 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 352 (preamble corr 0.94); payload 16 B, CRC-16 MISMATCH. (no length CRC-verified) CRC=FAIL; viterbi residual hard-errs=0; RS symbols corrected=0."
+          }
+        ]
+      },
+      "why": "Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> none -> preamble+crc16\nComposite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)\n\nWHY this modulation:\n  Classifier: 16QAM score=0.574 (supports)\n  Feature amp: fit=1.00\n  Feature kurt: fit=1.00\n  Feature papr: fit=0.00\n  Top-candidate margin: 0.246\n\nWHY this demodulation:\n  EVM RMS: 63.8% (poor)\n  EVM: -3.9 dB\n  Symbols recovered: 4096\n  Residual phase: 0.000 rad\n\nWHY this decode chain:\n  Rank 1: deint(block(4, 8)) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938\n    -> Chain [none|block(4,8)|preamble+crc16]: 16384 bits -> deint(block(4, 8)),frame/preamble+crc16. Preamble locked at bit 352 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 352 (preamble\n\nOperating context: SNR = 12.4 dB\nUncertainty: std_dev \u2248 0.452",
+      "why_short": "moderate 16QAM classifier support (0.58); poor/no demod; no valid frame | composite=0.475"
+    },
+    {
+      "rank": 8,
+      "chain": {
+        "id": "b399c70f7b55",
+        "modulation": "16QAM",
+        "demod_params": {
+          "modulation": "16QAM",
+          "samples_per_symbol": 4.0,
+          "apply_matched_filter": true,
+          "rolloff_alpha": 0.35
+        },
+        "deinterleaver": {
+          "type": "block",
+          "block_n": 4,
+          "block_m": 8
+        },
+        "fec": {
+          "mode": "none",
+          "use_soft_viterbi": true
+        },
+        "frame": {
+          "frame_name": "preamble+crc32",
+          "preamble_len": 16,
+          "payload_lengths_count": 26,
+          "crc_variant": "crc32_ieee"
+        },
+        "modulation_score": 0.5799,
+        "demodulation_score": 0.4,
+        "decoding_score": 0.389,
+        "composite_score": 0.4753,
+        "why": "",
+        "score_uncertainty": 0.4525,
+        "alternative_paths": [
+          "Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475",
+          "Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475",
+          "Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383"
+        ],
+        "num_decoding_results": 1,
+        "modulation_evidence": [
+          {
+            "id": "16QAM:classifier_score",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_score",
+            "value": 0.57448,
+            "value_norm": 0.5745,
+            "quality": "fair",
+            "supports": true,
+            "weight": 1.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "C42_norm": 6.863,
+              "C21_sym": 0.026,
+              "papr_db": 18.54,
+              "amp_var": 0.932,
+              "kurt_amp": 15.813,
+              "phase_std": 1.809,
+              "inst_freq_std_norm": 0.24795,
+              "spectral_flatness": 0.5394
+            },
+            "timestamp": 1789240510.20691
+          },
+          {
+            "id": "16QAM:fit_fit_amp",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_amp",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069187
+          },
+          {
+            "id": "16QAM:fit_fit_kurt",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_kurt",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069206
+          },
+          {
+            "id": "16QAM:classifier_confidence",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_confidence",
+            "value": 0.49918,
+            "value_norm": 0.4992,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.6,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069118
+          },
+          {
+            "id": "16QAM:top_margin",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "top_margin",
+            "value": 0.2458,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "delta_score",
+            "context": {},
+            "timestamp": 1789240510.2069685
+          },
+          {
+            "id": "16QAM:fit_fit_papr",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_papr",
+            "value": 4e-05,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.206922
+          },
+          {
+            "id": "16QAM:fit_fit_c42",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_c42",
+            "value": 0.0,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069159
+          }
+        ],
+        "demodulation_evidence": [
+          {
+            "id": "evm:evm_rms_percent",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_rms_percent",
+            "value": 63.75463,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 1.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "%",
+            "context": {},
+            "timestamp": 1789240520.4032862
+          },
+          {
+            "id": "evm_db:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_db",
+            "value": -3.90977,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 0.8,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "dB",
+            "context": {},
+            "timestamp": 1789240520.4032884
+          },
+          {
+            "id": "num_symbols:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "num_symbols",
+            "value": 4096.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "",
+            "context": {},
+            "timestamp": 1789240520.403291
+          },
+          {
+            "id": "residual_phase:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "residual_phase",
+            "value": 0.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "rad",
+            "context": {},
+            "timestamp": 1789240520.4032936
+          }
+        ],
+        "decoding_evidence": [],
+        "decoding_results": [
+          {
+            "spec_name": "none|block(4,8)|preamble+crc32",
+            "chain": "deint(block(4, 8)) -> frame/preamble+crc32",
+            "ok": false,
+            "crc_valid": false,
+            "payload_bits_sample": [
+              250,
+              118,
+              87,
+              66,
+              223,
+              116,
+              223,
+              116,
+              94,
+              23,
+              245,
+              231,
+              159,
+              179,
+              252,
+              226
+            ],
+            "payload_bytes_hex": "fa765742df74df745e17f5e79fb3fce2",
+            "num_viterbi_errors": 0,
+            "num_rs_symbols_corrected": 0,
+            "preamble_correlation": 0.938,
+            "frame_offset": 352,
+            "used_soft": false,
+            "why": "Chain [none|block(4,8)|preamble+crc32]: 16384 bits -> deint(block(4, 8)),frame/preamble+crc32. Preamble locked at bit 352 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 352 (preamble corr 0.94); payload 16 B, CRC-32 MISMATCH. (no length CRC-verified) CRC=FAIL; viterbi residual hard-errs=0; RS symbols corrected=0."
+          }
+        ]
+      },
+      "why": "Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> none -> preamble+crc32\nComposite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)\n\nWHY this modulation:\n  Classifier: 16QAM score=0.574 (supports)\n  Feature amp: fit=1.00\n  Feature kurt: fit=1.00\n  Feature papr: fit=0.00\n  Top-candidate margin: 0.246\n\nWHY this demodulation:\n  EVM RMS: 63.8% (poor)\n  EVM: -3.9 dB\n  Symbols recovered: 4096\n  Residual phase: 0.000 rad\n\nWHY this decode chain:\n  Rank 1: deint(block(4, 8)) -> frame/preamble+crc32 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938\n    -> Chain [none|block(4,8)|preamble+crc32]: 16384 bits -> deint(block(4, 8)),frame/preamble+crc32. Preamble locked at bit 352 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 352 (preamble\n\nOperating context: SNR = 12.4 dB\nUncertainty: std_dev \u2248 0.452",
+      "why_short": "moderate 16QAM classifier support (0.58); poor/no demod; no valid frame | composite=0.475"
+    },
+    {
+      "rank": 9,
+      "chain": {
+        "id": "70a0bdf5dc76",
+        "modulation": "16QAM",
+        "demod_params": {
+          "modulation": "16QAM",
+          "samples_per_symbol": 4.0,
+          "apply_matched_filter": true,
+          "rolloff_alpha": 0.35
+        },
+        "deinterleaver": {
+          "type": "block",
+          "block_n": 4,
+          "block_m": 8
+        },
+        "fec": {
+          "mode": "rs255_223",
+          "use_soft_viterbi": true
+        },
+        "frame": {
+          "frame_name": "preamble+crc16",
+          "preamble_len": 16,
+          "payload_lengths_count": 26,
+          "crc_variant": "crc16_ibm"
+        },
+        "modulation_score": 0.5799,
+        "demodulation_score": 0.4,
+        "decoding_score": 0.389,
+        "composite_score": 0.4753,
+        "why": "",
+        "score_uncertainty": 0.4525,
+        "alternative_paths": [
+          "Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475",
+          "Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475",
+          "Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383"
+        ],
+        "num_decoding_results": 1,
+        "modulation_evidence": [
+          {
+            "id": "16QAM:classifier_score",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_score",
+            "value": 0.57448,
+            "value_norm": 0.5745,
+            "quality": "fair",
+            "supports": true,
+            "weight": 1.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "C42_norm": 6.863,
+              "C21_sym": 0.026,
+              "papr_db": 18.54,
+              "amp_var": 0.932,
+              "kurt_amp": 15.813,
+              "phase_std": 1.809,
+              "inst_freq_std_norm": 0.24795,
+              "spectral_flatness": 0.5394
+            },
+            "timestamp": 1789240510.20691
+          },
+          {
+            "id": "16QAM:fit_fit_amp",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_amp",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069187
+          },
+          {
+            "id": "16QAM:fit_fit_kurt",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_kurt",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069206
+          },
+          {
+            "id": "16QAM:classifier_confidence",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_confidence",
+            "value": 0.49918,
+            "value_norm": 0.4992,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.6,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069118
+          },
+          {
+            "id": "16QAM:top_margin",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "top_margin",
+            "value": 0.2458,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "delta_score",
+            "context": {},
+            "timestamp": 1789240510.2069685
+          },
+          {
+            "id": "16QAM:fit_fit_papr",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_papr",
+            "value": 4e-05,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.206922
+          },
+          {
+            "id": "16QAM:fit_fit_c42",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_c42",
+            "value": 0.0,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069159
+          }
+        ],
+        "demodulation_evidence": [
+          {
+            "id": "evm:evm_rms_percent",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_rms_percent",
+            "value": 63.75463,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 1.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "%",
+            "context": {},
+            "timestamp": 1789240520.403351
+          },
+          {
+            "id": "evm_db:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_db",
+            "value": -3.90977,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 0.8,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "dB",
+            "context": {},
+            "timestamp": 1789240520.4033537
+          },
+          {
+            "id": "num_symbols:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "num_symbols",
+            "value": 4096.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "",
+            "context": {},
+            "timestamp": 1789240520.4033577
+          },
+          {
+            "id": "residual_phase:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "residual_phase",
+            "value": 0.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "rad",
+            "context": {},
+            "timestamp": 1789240520.40336
+          }
+        ],
+        "decoding_evidence": [],
+        "decoding_results": [
+          {
+            "spec_name": "rs255_223|block(4,8)|preamble+crc16",
+            "chain": "deint(block(4, 8)) -> RS 255,223 (0 sym corr) -> frame/preamble+crc16",
+            "ok": false,
+            "crc_valid": false,
+            "payload_bits_sample": [
+              250,
+              118,
+              87,
+              66,
+              223,
+              116,
+              223,
+              116,
+              94,
+              23,
+              245,
+              231,
+              159,
+              179,
+              252,
+              226
+            ],
+            "payload_bytes_hex": "fa765742df74df745e17f5e79fb3fce2",
+            "num_viterbi_errors": 0,
+            "num_rs_symbols_corrected": 0,
+            "preamble_correlation": 0.938,
+            "frame_offset": 96,
+            "used_soft": false,
+            "why": "Chain [rs255_223|block(4,8)|preamble+crc16]: 14272 bits -> deint(block(4, 8)),RS 255,223 (0 sym corr),frame/preamble+crc16. Preamble locked at bit 96 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 96 (preamble corr 0.94); payload 16 B, CRC-16 MISMATCH. (no length CRC-verified) CRC=FAIL; viterbi residual hard-errs=0; RS symbols corrected=0."
+          }
+        ]
+      },
+      "why": "Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> rs255_223 -> preamble+crc16\nComposite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)\n\nWHY this modulation:\n  Classifier: 16QAM score=0.574 (supports)\n  Feature amp: fit=1.00\n  Feature kurt: fit=1.00\n  Feature papr: fit=0.00\n  Top-candidate margin: 0.246\n\nWHY this demodulation:\n  EVM RMS: 63.8% (poor)\n  EVM: -3.9 dB\n  Symbols recovered: 4096\n  Residual phase: 0.000 rad\n\nWHY this decode chain:\n  Rank 1: deint(block(4, 8)) -> RS 255,223 (0 sym corr) -> frame/preamble+crc16 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938\n    -> Chain [rs255_223|block(4,8)|preamble+crc16]: 14272 bits -> deint(block(4, 8)),RS 255,223 (0 sym corr),frame/preamble+crc16. Preamble locked at bit 96 (corr 0.94); payload length scan 16..248 B.; Frame\n\nOperating context: SNR = 12.4 dB\nUncertainty: std_dev \u2248 0.452",
+      "why_short": "moderate 16QAM classifier support (0.58); poor/no demod; no valid frame | composite=0.475"
+    },
+    {
+      "rank": 10,
+      "chain": {
+        "id": "1aa614546f76",
+        "modulation": "16QAM",
+        "demod_params": {
+          "modulation": "16QAM",
+          "samples_per_symbol": 4.0,
+          "apply_matched_filter": true,
+          "rolloff_alpha": 0.35
+        },
+        "deinterleaver": {
+          "type": "block",
+          "block_n": 4,
+          "block_m": 8
+        },
+        "fec": {
+          "mode": "rs255_223",
+          "use_soft_viterbi": true
+        },
+        "frame": {
+          "frame_name": "preamble+crc32",
+          "preamble_len": 16,
+          "payload_lengths_count": 26,
+          "crc_variant": "crc32_ieee"
+        },
+        "modulation_score": 0.5799,
+        "demodulation_score": 0.4,
+        "decoding_score": 0.389,
+        "composite_score": 0.4753,
+        "why": "",
+        "score_uncertainty": 0.4525,
+        "alternative_paths": [
+          "Chain[3d86924b]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc16 | score=0.475",
+          "Chain[6b86f3fe]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> none -> preamble+crc32 | score=0.475",
+          "Chain[36e98da4]: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> none -> viterbi -> preamble+crc16 | score=0.383"
+        ],
+        "num_decoding_results": 1,
+        "modulation_evidence": [
+          {
+            "id": "16QAM:classifier_score",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_score",
+            "value": 0.57448,
+            "value_norm": 0.5745,
+            "quality": "fair",
+            "supports": true,
+            "weight": 1.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "C42_norm": 6.863,
+              "C21_sym": 0.026,
+              "papr_db": 18.54,
+              "amp_var": 0.932,
+              "kurt_amp": 15.813,
+              "phase_std": 1.809,
+              "inst_freq_std_norm": 0.24795,
+              "spectral_flatness": 0.5394
+            },
+            "timestamp": 1789240510.20691
+          },
+          {
+            "id": "16QAM:fit_fit_amp",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_amp",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069187
+          },
+          {
+            "id": "16QAM:fit_fit_kurt",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_kurt",
+            "value": 1.0,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069206
+          },
+          {
+            "id": "16QAM:classifier_confidence",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "classifier_confidence",
+            "value": 0.49918,
+            "value_norm": 0.4992,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.6,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069118
+          },
+          {
+            "id": "16QAM:top_margin",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "top_margin",
+            "value": 0.2458,
+            "value_norm": 1.0,
+            "quality": "good",
+            "supports": true,
+            "weight": 0.4,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "delta_score",
+            "context": {},
+            "timestamp": 1789240510.2069685
+          },
+          {
+            "id": "16QAM:fit_fit_papr",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_papr",
+            "value": 4e-05,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.206922
+          },
+          {
+            "id": "16QAM:fit_fit_c42",
+            "stage": "modulation",
+            "candidate": "16QAM",
+            "measurement": "fit_fit_c42",
+            "value": 0.0,
+            "value_norm": 0.0,
+            "quality": "poor",
+            "supports": true,
+            "weight": 0.35,
+            "source": "modulation.classifier.classify",
+            "provenance": "signal_inferred",
+            "family": null,
+            "unit": "",
+            "context": {
+              "why": "C42=6.86 (16QAM target 0.68), multi-ring amplitude variance=0.93, amplitude kurtosis=15.81 (multi-level grid indicator), PAPR=18.5 dB."
+            },
+            "timestamp": 1789240510.2069159
+          }
+        ],
+        "demodulation_evidence": [
+          {
+            "id": "evm:evm_rms_percent",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_rms_percent",
+            "value": 63.75463,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 1.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "%",
+            "context": {},
+            "timestamp": 1789240520.4033742
+          },
+          {
+            "id": "evm_db:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "evm_db",
+            "value": -3.90977,
+            "value_norm": 0.0,
+            "quality": "fair",
+            "supports": false,
+            "weight": 0.8,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "dB",
+            "context": {},
+            "timestamp": 1789240520.4033763
+          },
+          {
+            "id": "num_symbols:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "num_symbols",
+            "value": 4096.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "",
+            "context": {},
+            "timestamp": 1789240520.4033995
+          },
+          {
+            "id": "residual_phase:16QAM",
+            "stage": "demodulation",
+            "candidate": "16QAM",
+            "measurement": "residual_phase",
+            "value": 0.0,
+            "value_norm": 1.0,
+            "quality": "fair",
+            "supports": true,
+            "weight": 0.5,
+            "source": "demodulator",
+            "provenance": "signal_demodulated",
+            "family": null,
+            "unit": "rad",
+            "context": {},
+            "timestamp": 1789240520.4034014
+          }
+        ],
+        "decoding_evidence": [],
+        "decoding_results": [
+          {
+            "spec_name": "rs255_223|block(4,8)|preamble+crc32",
+            "chain": "deint(block(4, 8)) -> RS 255,223 (0 sym corr) -> frame/preamble+crc32",
+            "ok": false,
+            "crc_valid": false,
+            "payload_bits_sample": [
+              250,
+              118,
+              87,
+              66,
+              223,
+              116,
+              223,
+              116,
+              94,
+              23,
+              245,
+              231,
+              159,
+              179,
+              252,
+              226
+            ],
+            "payload_bytes_hex": "fa765742df74df745e17f5e79fb3fce2",
+            "num_viterbi_errors": 0,
+            "num_rs_symbols_corrected": 0,
+            "preamble_correlation": 0.938,
+            "frame_offset": 96,
+            "used_soft": false,
+            "why": "Chain [rs255_223|block(4,8)|preamble+crc32]: 14272 bits -> deint(block(4, 8)),RS 255,223 (0 sym corr),frame/preamble+crc32. Preamble locked at bit 96 (corr 0.94); payload length scan 16..248 B.; Frame locked at bit 96 (preamble corr 0.94); payload 16 B, CRC-32 MISMATCH. (no length CRC-verified) CRC=FAIL; viterbi residual hard-errs=0; RS symbols corrected=0."
+          }
+        ]
+      },
+      "why": "Hypothesis: 16QAM -> 16QAM | sps=4.00 | alpha=0.35 -> block(4,8) -> rs255_223 -> preamble+crc32\nComposite Score: 0.475 (mod=0.58, demod=0.40, decode=0.39)\n\nWHY this modulation:\n  Classifier: 16QAM score=0.574 (supports)\n  Feature amp: fit=1.00\n  Feature kurt: fit=1.00\n  Feature papr: fit=0.00\n  Top-candidate margin: 0.246\n\nWHY this demodulation:\n  EVM RMS: 63.8% (poor)\n  EVM: -3.9 dB\n  Symbols recovered: 4096\n  Residual phase: 0.000 rad\n\nWHY this decode chain:\n  Rank 1: deint(block(4, 8)) -> RS 255,223 (0 sym corr) -> frame/preamble+crc32 | CRC=FAIL | Viterbi errs=0 | RS corr=0 | preamble corr=0.938\n    -> Chain [rs255_223|block(4,8)|preamble+crc32]: 14272 bits -> deint(block(4, 8)),RS 255,223 (0 sym corr),frame/preamble+crc32. Preamble locked at bit 96 (corr 0.94); payload length scan 16..248 B.; Frame\n\nOperating context: SNR = 12.4 dB\nUncertainty: std_dev \u2248 0.452",
+      "why_short": "moderate 16QAM classifier support (0.58); poor/no demod; no valid frame | composite=0.475"
+    }
+  ]
+}
